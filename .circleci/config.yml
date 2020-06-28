@@ -1,0 +1,39 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.7
+        environment:
+          PGHOST: 0.0.0.0
+          PGUSER: root
+      - image: circleci/postgres:12.1-alpine-ram
+        environment:
+          POSTGRES_USER: root
+    steps:
+      - checkout
+      - restore_cache:
+          key: deps1-{{ .Branch }}-{{ checksum "src/requirements.txt" }}
+      - run:
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r src/requirements.txt
+      - save_cache:
+          key: deps1-{{ .Branch }}-{{ checksum "src/requirements.txt" }}
+          paths:
+            - "venv"
+      - run:
+          name: Waiting for Postgres to be ready
+          command: dockerize -wait tcp://0.0.0.0:5432 -timeout 1m
+      - run:
+          name: Running tests
+          command: |
+            . venv/bin/activate
+            cd src
+            python3 manage.py test
+      - store_test_results: # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
+          path: test-results
+      - store_artifacts: # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
+          path: test-results
+          destination: tr1

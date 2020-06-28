@@ -1,0 +1,57 @@
+form.generic-form input[type="text"],
+form.generic-form input[type="password"],
+form.generic-form input[type="email"],
+form.generic-form input[type="number"],
+form.generic-form input[type="tel"],
+form.generic-form input[type="url"] {
+  @apply bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 mb-2 text-gray-700 leading-tight;
+
+  &:focus {
+    @apply outline-none bg-white border-blue-500;
+  }
+}
+
+form.generic-form select {
+  @apply block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 mb-2 rounded leading-tight;
+
+  &:focus {
+    @apply outline-none bg-white border-gray-500;
+  }
+
+  &:hover {
+    @apply cursor-pointer;
+  }
+}
+
+form.generic-form input[type="checkbox"] {
+  @apply ml-2 mb-2 leading-tight;
+}
+
+input[type="submit"] {
+  @apply cursor-pointer mt-2 bg-blue-500 text-white font-bold py-2 px-4 rounded;
+
+  &:hover {
+    @apply bg-blue-700;
+  }
+}
+
+input[type="submit"][disabled] {
+  @apply bg-gray-500 cursor-not-allowed; 
+}
+
+input[name="delete"] {
+  @apply bg-red-700;
+
+  &:hover {
+    @apply bg-red-800;
+  }
+}
+
+label.required:after {
+  color: #cb2431;
+  content: " *";
+}
+
+form.generic-form .errorlist li {
+  color: #cb2431;
+}

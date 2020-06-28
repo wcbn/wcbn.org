@@ -1,0 +1,96 @@
+nav #nav-options {
+  @apply w-full block flex-grow;
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  overflow: hidden;
+}
+
+nav #nav-toggle-label {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 14px 10px;
+  position: relative;
+  user-select: none;
+}
+
+nav #nav-toggle-icon {
+  @apply bg-blue-200;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+
+  &:before,
+  &:after {
+    @apply bg-blue-200;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+
+  &:before {
+    top: 5px;
+  }
+
+  &:after {
+    top: -5px;
+  }
+}
+
+nav #nav-toggle-input {
+  display: none;
+
+  &:checked ~ #nav-options {
+    @apply max-h-screen;
+  }
+
+  &:checked ~ #nav-toggle-label #nav-toggle-icon {
+    @apply bg-transparent;
+
+    &:before {
+      @apply transform -rotate-45;
+    }
+
+    &:after {
+      @apply transform rotate-45;
+    }
+
+    &:before,
+    &:after {
+      top: 0;
+    }
+  }
+}
+
+nav a.nav-link {
+  @apply block mt-4 text-blue-200;
+
+  &:not(:last-child) {
+    @apply mr-4;
+  }
+
+  &:hover {
+    @apply text-white;
+  }
+}
+
+@screen lg {
+  nav #nav-options {
+    clear: none;
+    float: right;
+    max-height: none;
+    @apply flex items-center w-auto;
+  }
+  nav #nav-toggle-label {
+    display: none;
+  }
+  nav a.nav-link {
+    @apply inline-block mt-0;
+  }
+}

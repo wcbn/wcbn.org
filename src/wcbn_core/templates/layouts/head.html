@@ -1,0 +1,18 @@
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if SHOULD_RELOAD %}
+  <meta name="turbolinks-visit-control" content="reload">
+  {% endif %}
+  <title>{% if title %}{{title}} · {% endif %}WCBN</title>
+  <link rel="shortcut icon" type="image/png" href='{% static "img/favicon.ico" %}' />
+  {% ifnotequal ENV "app.environments.development" %}
+  <link rel="stylesheet" type="text/css" href="{% static 'dist/main.css' %}" />
+  {% endifnotequal %}
+  <script src='{% static "dist/bundle.js" %}'></script>
+  {% if GA_MEASUREMENT_ID %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ GA_MEASUREMENT_ID }}"></script>
+  <script> window.subscribeGTAG("{{ GA_MEASUREMENT_ID }}")</script>
+  {% endif %}
+</head>

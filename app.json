@@ -1,0 +1,16 @@
+{
+  "environments": {
+    "review": {
+      "addons": ["heroku-postgresql:hobby-dev"]
+    }
+  },
+  "keywords": ["django", "postgres", "python"],
+  "logo": "https://www.wcbn.org/static/img/favicon.ico",
+  "name": "WCBN",
+  "repository": "https://github.com/wcbn/wcbn.org",
+  "scripts": {
+    "postdeploy": "echo \"from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('admin@wcbn.org', '$PR_REVIEW_PW')\" | python manage.py shell"
+  },
+  "stack": "container",
+  "website": "https://wcbn.org/"
+}

@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@import "./forms.css";
+@import "./messages.css";
+@import "./navbar.css";
+@import "./footer.css";
+
+
+html {
+  @apply h-full;
+}
+
+body {
+  @apply h-full bg-gray-100 flex flex-col;
+}
+
+.heading {
+  @apply text-3xl;
+}
+
+.generic-link {
+  @apply text-blue-700;
+}
+.generic-link:hover {
+  @apply underline;
+}
+
+.g-recaptcha > div {
+  @apply m-auto mt-2 mb-2;
+}
+
+.halves {
+  @apply flex;
+  .half {
+    @apply flex-1;
+  }
+}
+
+.flex-reverse-wrapper {
+  overflow: auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.bold {
+  @apply font-bold;
+}
+
+@tailwind utilities;

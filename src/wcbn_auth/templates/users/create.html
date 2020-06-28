@@ -1,0 +1,12 @@
+{% extends "layouts/application.html" %}
+{% block content %}
+<div class="max-w-xs m-auto">
+<h1 class="heading text-center mb-3">Create your account</h1>
+
+<form class="generic-form" method="post">{% csrf_token %}
+  {{ form.as_p }}
+  <input class="w-full" type="submit" value="Sign Up" disabled>
+</form>
+
+</div>
+{% endblock %}

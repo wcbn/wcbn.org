@@ -1,0 +1,24 @@
+ul.messages {
+  li {
+
+    p {
+      @apply p-4 text-sm m-auto;
+    }
+
+    &.error {
+      @apply bg-red-200 text-red-900;
+    }
+
+    &.info {
+      @apply bg-blue-200 text-blue-900;
+    }
+
+    &.success {
+      @apply bg-green-200 text-green-900;
+    }
+
+    &.warning {
+      @apply bg-orange-200 text-orange-900;
+    }
+  }
+}

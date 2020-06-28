@@ -1,0 +1,26 @@
+{% extends "layouts/application.html" %}
+{% block content %}
+<div class="max-w-xs m-auto">
+
+{% if form.errors %}
+<!-- <p class="text-lg mb-4">Your username and password didn't match. Please try again.</p> -->
+<!-- TODO: use this: The username and password you entered did not match our records. Please double-check and try again. -->
+{% endif %}
+
+<h1 class="heading mb-3 text-center">Log in</h1>
+
+<form class="generic-form" method="post">{% csrf_token %}
+  {{form.as_p}}
+  <input class="w-full" type="submit" value="Log In">
+  <input type="hidden" name="next" value="{{ next }}" />
+</form>
+
+<div class="mt-10 flex justify-center align-middle">
+  <p class="text-sm">
+  <a class="generic-link" href="{% url 'password_reset' %}">Forgot password?</a> · 
+  <a class="generic-link" href="{% url 'wcbn_auth:create_user' %}">Create an account</a>
+  </p>
+</div>
+
+</div>
+{% endblock %}

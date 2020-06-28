@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  {% include "./head.html" %}
+  <body>
+    {% include "./header.html" %}
+    {% include "./messages.html" %}
+    <div class="container p-4 m-auto flex-grow flex-shrink-0">
+    {% block content %}{% endblock %}
+    </div>
+    {% include "./footer.html" %}
+  </body>
+</html>

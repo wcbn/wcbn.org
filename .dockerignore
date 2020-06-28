@@ -1,0 +1,24 @@
+.circleci
+.DS_Store
+.env
+.git
+.gitignore
+.vscode/
+
+__pycache__/
+*.py[cod]
+
+# Django stuff
+db.sqlite3
+
+docs/
+*.md
+
+temp/
+
+node_modules/
+
+env/
+
+# DB volumes
+data/
