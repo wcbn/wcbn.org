@@ -1,5 +1,7 @@
 # wcbn.org
 
+[![wcbn](https://circleci.com/gh/wcbn/wcbn.org.svg?style=svg)](https://app.circleci.com/pipelines/github/wcbn/wcbn.org)
+
 # Getting Started
 
 In order to run this web application, you’ll need to install Docker and Yarn. If you’re on a Mac, you can follow these instructions directly. Otherwise, hopefully they are useful as Google fodder.
@@ -84,5 +86,6 @@ Find the config under `.circleci/config.yml`
 
 Requires these environment variables that can be found in your `.env`:
 
-- SECRET_KEY
-- DB_NAME
+        SECRET_KEY=insertrandomstringhere123
+        DB_NAME=wcbn
+        DJANGO_SETTINGS_MODULE=app.environments.test
