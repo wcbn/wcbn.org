@@ -26,6 +26,7 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
 INSTALLED_APPS = [
     'wcbn_auth.apps.WCBNAuthConfig',
     'wcbn_core',
+    'readback',
     'ionicons',
     'captcha',
     'django.contrib.admin',
