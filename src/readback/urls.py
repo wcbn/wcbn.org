@@ -4,4 +4,5 @@ from readback.views import *
 app_name = 'readback'
 urlpatterns = [
     path('schedule/', schedule, name='schedule'),
+    path('playlist/', playlist, name='playlist'),
 ]
