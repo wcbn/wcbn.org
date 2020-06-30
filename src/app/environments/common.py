@@ -26,6 +26,7 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
 INSTALLED_APPS = [
     'wcbn_auth.apps.WCBNAuthConfig',
     'wcbn_core',
+    'readback',
     'ionicons',
     'captcha',
     'django.contrib.admin',
@@ -182,3 +183,5 @@ DATE_INPUT_FORMATS = [
 ]
 
 SITE_ID = 1 # used by flatpages and sites
+
+READBACK_URL = "https://app.wcbn.org"
