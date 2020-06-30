@@ -183,3 +183,5 @@ DATE_INPUT_FORMATS = [
 ]
 
 SITE_ID = 1 # used by flatpages and sites
+
+READBACK_URL = "https://app.wcbn.org"

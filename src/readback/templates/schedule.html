@@ -1,22 +1,38 @@
 {% extends "layouts/application.html"%}
 {% block content %}
 
-<div id="schedule" class="flex w-full h-full pb-20">
-  {% for day, shows in sched.items %}
-  <div class="flex-1">
-    <p class="text-center font-bold p-1 text-md">{{day}}</p>
-   
-    <div class="flex flex-col h-full" >
-    {% for show in shows %}
-      <div class="border border-r-0 p-1" style="flex:{{show.diff}}">
-        <p class="text-sm overflow-hidden">{{show.name}}</p>
-        <p class="text-xs italic text-blue-500 overflow-hidden">{{show.with}}</p>
-      </div>
-    {% endfor %}
-    </div>
+<div id="schedule-table-wrapper" class="flex w-full">
+  <table class="table-fixed border-separate">
+    <thead>
+      <tr>
+        <th></th>
+        {% for th in weekdays %}
+        <th class="p-1" style="width: 14.285%">{{th}}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for tr in schedule %}
+      <tr>
+        <td class="align-top">
+          <p class="text-xs font-semibold -mt-2"> {{tr.0.beginning|slice:"11:16"}}</p>
+        </td>
+        {% for td in tr %}
+          <td class="border p-1 align-top hover:bg-blue-200" rowspan="{{td.rowspan}}">
+            <p class="text-sm">{{td.name}}</p>
+            <p class="text-xs italic text-blue-500">{{td.with}}</p>
+          </td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
 
-  </div>
-  {% endfor %}
+<div class="flex flex-row-reverse mt-2">
+  <p class="text-sm text-right">View past schedules, DJ bios, and more<br>
+  in our database, <a class="generic-link" href="{{READBACK_URL}}/semesters">Readback →</a>
+  </p>
 </div>
 
 {% endblock %}
