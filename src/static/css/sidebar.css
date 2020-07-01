@@ -1,0 +1,17 @@
+#homepage > aside {
+  @apply max-w-xs w-full;
+  
+  section {
+    @apply mb-3;
+
+    h1 {
+      @apply text-2xl font-bold;
+    }
+  }
+
+  #make-request {
+    svg {
+      @apply h-8 w-8;
+    }
+  }
+}

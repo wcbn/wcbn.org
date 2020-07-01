@@ -6,13 +6,11 @@
   </div>
 
   <div id="social-media">
-  {% ionicon name="logo-twitter" %}
-  {% ionicon name="logo-instagram" %}
-  {% ionicon name="logo-facebook" %}
-  {% ionicon name="logo-youtube" %}
-  {% ionicon name="logo-soundcloud" %}
-  {% ionicon name="logo-reddit" %}
-  {% ionicon name="logo-github" %}
+  {% for icon, url in SOCIAL_ICONS.items %}
+  <a href="{{url}}">
+  {% ionicon name=icon %}
+  </a>
+  {% endfor %}
   </div>
 </div>
 </footer>

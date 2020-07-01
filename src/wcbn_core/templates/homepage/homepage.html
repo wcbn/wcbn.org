@@ -1,0 +1,12 @@
+{% extends "layouts/application.html" %}
+
+{% block content%}
+
+<div id="homepage" class="flex flex-col lg:flex-row justify-between">
+  <section class="flex-grow pr-4">
+  {% include "articles/list.html" %}
+  </section>
+  {% include "homepage/sidebar.html" %}
+
+</div>
+{% endblock %}
