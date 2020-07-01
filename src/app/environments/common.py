@@ -26,6 +26,7 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
 INSTALLED_APPS = [
     'wcbn_auth.apps.WCBNAuthConfig',
     'wcbn_core',
+    'wcbn_cms',
     'readback',
     'ionicons',
     'captcha',
@@ -174,7 +175,7 @@ DATE_INPUT_FORMATS = [
     '%m-%d-%Y', '%m-%d-%y',             # '10-25-2006', '10-25-06',
     '%m/%d/%Y', '%m/%d/%y',             # '10/25/2006', '10/25/06',
     '%m.%d.%Y', '%m.%d.%y',             # '10.25.2006', '10.25.06',
-    '%m %d %Y', '%m %d %y',             # '10 25 2006', '10 25 06', 
+    '%m %d %Y', '%m %d %y',             # '10 25 2006', '10 25 06',
     '%b %d %Y', '%b %d, %Y',            # 'Oct 25 2006', 'Oct 25, 2006'
     '%d %b %Y', '%d %b, %Y',            # '25 Oct 2006', '25 Oct, 2006'
     '%B %d %Y', '%B %d, %Y',            # 'October 25 2006', 'October 25, 2006'
@@ -182,6 +183,29 @@ DATE_INPUT_FORMATS = [
     '%Y-%m-%d'                          # '2006-10-25' <-- Django's annoying default :)
 ]
 
-SITE_ID = 1 # used by flatpages and sites
+SITE_ID = 1  # used by flatpages and sites
 
+# WCBN config
 READBACK_URL = "https://app.wcbn.org"
+STUDIO_LINE = "(734) 763-3500"
+
+SOCIAL_ICONS = {
+    "logo-twitter": "https://twitter.com/wcbn_fm",
+    "logo-instagram": "https://instagram.com/wcbn_fm",
+    # "logo-facebook": "#", #NOTE facebook sucks
+    "logo-youtube": "#",
+    "logo-soundcloud": "#",
+    "logo-reddit": "https://www.reddit.com/r/wcbn/",
+    "logo-github": "https://github.com/wcbn"
+}
+
+
+RESOURCE_LINKS = {
+    'Become a DJ': "#",
+    'Become an Underwriter': "#",
+    "Official Forum": SOCIAL_ICONS["logo-reddit"],
+    "Unofficial Fan Club": "#",
+    'Readback Database': READBACK_URL,
+    'Give to WCBN': "https://leadersandbest.umich.edu/find/#!/give/basket/fund/361991"
+}
+

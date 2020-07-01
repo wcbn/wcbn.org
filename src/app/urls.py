@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('wcbn_core.urls')),
     path('', include('wcbn_auth.urls')),
+    path('', include('wcbn_cms.urls')),
     path('', include('readback.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('about/', flatpage, {'url': '/about/'}, name='about'),

@@ -4,7 +4,7 @@
 @import "./messages.css";
 @import "./navbar.css";
 @import "./footer.css";
-
+@import "./sidebar.css";
 
 html {
   @apply h-full;
