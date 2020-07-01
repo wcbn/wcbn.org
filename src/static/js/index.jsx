@@ -37,7 +37,6 @@ document.addEventListener("turbolinks:load", (event) => {
 });
 
 // jquery
-import * as x from "@chenfengyuan/datepicker";
 import jQuery from "jquery";
 window.$ = window.jQuery = jQuery;
 
