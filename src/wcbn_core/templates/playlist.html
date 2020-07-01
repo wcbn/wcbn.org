@@ -1,0 +1,45 @@
+{% extends "layouts/application.html" %}
+
+{% block content %}
+
+<table>
+{% for item in items %}
+<tr>
+{{item.html|safe}}
+</tr>
+{% endfor %}
+</table>
+
+{{ playlist_limit|json_script:"playlist-limit" }}
+
+<script>
+function oneDayPriorTo(date) {
+  return new Date(date.getTime() - 24 * 60 * 60 * 1000)
+}
+
+$(window).scroll(function () {
+  if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+
+    til = new Date(
+      JSON.parse(document.getElementById("playlist-limit").textContent)
+    )
+    from = oneDayPriorTo(til)
+
+    til = til.toISOString();
+    from = from.toISOString();
+
+    fetch(`{{READBACK_URL}}/playlist/archive.json?til=${til}&from=${from}`)
+    .then(response => response.json())
+    .then(data => {
+      console.log(data)
+      // TODO configure CORS on Readback
+      // TODO for item in items, append item to document
+      document.getElementById("playlist-limit").textContent = JSON.stringify(from)
+      });
+
+  }
+});
+
+</script>
+
+{% endblock %}
