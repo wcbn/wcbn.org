@@ -1,0 +1,9 @@
+{% for o in object_list %}
+
+<div class="break-words">
+<h2>{{o}}</h2>
+<hr>
+<p>{{o.author}} -- {{o.created_at}}</p>
+<p>{{o.text}}</p>
+</div>
+{% endfor %}
