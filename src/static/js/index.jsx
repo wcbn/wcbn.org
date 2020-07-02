@@ -48,13 +48,3 @@ window.enableFormSubmit = () => {
     .querySelector('input[type="submit"]')
     .removeAttribute("disabled");
 };
-
-// import React from "react";
-// import { render } from "react-dom";
-
-// const element = <div>test</div>;
-
-// const Container = document.getElementById("react-test");
-// if (Container) {
-//   render(element, Container);
-// }

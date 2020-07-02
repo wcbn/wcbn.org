@@ -7,10 +7,16 @@
   {% endif %}
   <title>{% if title %}{{title}} · {% endif %}WCBN</title>
   <link rel="shortcut icon" type="image/png" href='{% static "img/favicon.ico" %}' />
-  {% ifnotequal ENV "app.environments.development" %}
-  <link rel="stylesheet" type="text/css" href="{% static 'dist/main.css' %}" />
-  {% endifnotequal %}
-  <script src='{% static "dist/bundle.js" %}'></script>
+
+  <script src='{% static "dist/index.bundle.js" %}'></script>
+  <script defer src='{% static "dist/player.bundle.js" %}'></script>
+  
+  {% ifequal ENV "app.environments.development" %}
+  <script src='{% static "dist/styles.bundle.js" %}'></script>
+  {% else %}
+  <link rel="stylesheet" type="text/css" href="{% static 'dist/styles.css' %}" />
+  {% endifequal %}
+
   {% if GA_MEASUREMENT_ID %}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ GA_MEASUREMENT_ID }}"></script>
   <script> window.subscribeGTAG("{{ GA_MEASUREMENT_ID }}")</script>

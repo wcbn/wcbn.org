@@ -1,0 +1,7 @@
+#floyd {
+  @apply m-auto px-4;
+
+  audio {
+    @apply w-full;
+  }
+}
