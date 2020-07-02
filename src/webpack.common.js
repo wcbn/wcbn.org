@@ -2,10 +2,14 @@ const webpack = require("webpack");
 const path = require("path");
 
 module.exports = {
-  entry: ["./static/js/index.jsx", "./static/css/application.css"],
+  entry: {
+    index: "./static/js/index.jsx",
+    player: "./static/js/player.jsx",
+    styles: "./static/css/application.css",
+  },
   output: {
     path: path.resolve(__dirname + "/static/", "dist"),
-    filename: "bundle.js",
+    filename: "[name].bundle.js",
     publicPath: "/assets/",
   },
   module: {

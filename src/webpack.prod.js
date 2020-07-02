@@ -3,6 +3,8 @@ const TerserJSPlugin = require("terser-webpack-plugin");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const common = require("./webpack.common.js");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 
 module.exports = merge(common, {
   mode: "production",
@@ -25,7 +27,11 @@ module.exports = merge(common, {
       }),
     ],
   },
-  plugins: [new MiniCSSExtractPlugin()],
+  plugins: [
+    new CleanWebpackPlugin(),
+    new FixStyleOnlyEntriesPlugin(),
+    new MiniCSSExtractPlugin(),
+  ],
   module: {
     rules: [
       {
@@ -42,7 +48,11 @@ module.exports = merge(common, {
             loader: "postcss-loader",
             options: {
               ident: "postcss",
-              plugins: [require("tailwindcss"), require('postcss-nested'), require("autoprefixer")],
+              plugins: [
+                require("tailwindcss"),
+                require("postcss-nested"),
+                require("autoprefixer"),
+              ],
             },
           },
         ],
