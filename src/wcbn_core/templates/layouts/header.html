@@ -1,13 +1,10 @@
 {% load static %}
-<header class="bg-blue-500">
+<header>
   
-  <nav class="flex items-center justify-between flex-wrap p-4 container m-auto">
+  <nav class="container">
    
-    <a href="/" class="mr-6">
-      <div class="flex items-center flex-shrink-0 text-white">
-        <!-- <img class="h-8 mr-2" src='{% static "img/favicon.ico" %}' alt="WCBN Logo" /> -->
-        <span class="font-semibold text-xl tracking-tight">WCBN</span>
-      </div>
+    <a id="wcbn-logo" href="{% url 'wcbn_core:homepage' %}">
+      <img src='{% static "img/logo.png" %}' alt="WCBN Logo" />
     </a>
 
     <input id="nav-toggle-input" type="checkbox" />
@@ -15,22 +12,16 @@
 
     <div id="nav-options">
       
-      <div class="lg:flex-grow">
-        <a class="nav-link" href="{% url 'about' %}">About</a>
-        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-        <a class="nav-link" href="{% url 'readback:schedule' %}">Schedule</a>
-        <a class="nav-link" href="{% url 'readback:playlist' %}">Playlist</a>
+      <div id="nav-links-wrapper">
+        <a class="nav-link" href="{% url 'about' %}">About</a><a class="nav-link" href="{% url 'contact' %}">Contact</a><a class="nav-link" href="{% url 'readback:schedule' %}">Schedule</a><a class="nav-link" href="{% url 'readback:playlist' %}">Playlist</a>
       </div>
-    
+
       <div>
-        <div class="lg:flex-grow text-sm">
-          {% if user.is_authenticated %}
-          <a class="nav-link" href="{% url 'logout' %}">Logout</a>
-          {% else %}
-          <a class="nav-link" href="{% url 'wcbn_auth:login' %}">Log in</a>
-          <a class="nav-link" href="{% url 'wcbn_auth:create_user' %}">Sign up</a>
-          {% endif %}
-        </div>
+        {% if user.is_authenticated %}
+        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+        {% else %}
+        <a class="nav-link" href="{% url 'wcbn_auth:login' %}">Log in</a><a class="nav-link" href="{% url 'wcbn_auth:create_user' %}">Sign up</a>
+        {% endif %}
       </div>
 
     </div>
