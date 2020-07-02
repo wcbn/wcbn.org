@@ -1,3 +1,15 @@
+nav {
+  @apply flex items-center justify-between flex-wrap p-4 m-auto;
+}
+
+#wcbn-logo {
+  @apply mr-6;
+
+  img {
+    @apply h-10 mr-2;
+  }
+}
+
 nav #nav-options {
   @apply w-full block flex-grow;
   clear: both;
@@ -16,7 +28,7 @@ nav #nav-toggle-label {
 }
 
 nav #nav-toggle-icon {
-  @apply bg-blue-200;
+  @apply bg-black;
   display: block;
   height: 2px;
   position: relative;
@@ -25,7 +37,7 @@ nav #nav-toggle-icon {
 
   &:before,
   &:after {
-    @apply bg-blue-200;
+    @apply bg-black;
     content: "";
     display: block;
     height: 100%;
@@ -69,18 +81,18 @@ nav #nav-toggle-input {
 }
 
 nav a.nav-link {
-  @apply block mt-4 text-blue-200;
-
-  &:not(:last-child) {
-    @apply mr-4;
-  }
+  @apply block text-black pt-1 font-semibold text-sm;
 
   &:hover {
-    @apply text-white;
+    @apply text-blue-500;
   }
 }
 
 @screen lg {
+  #nav-links-wrapper {
+    @apply flex-grow;
+  }
+
   nav #nav-options {
     clear: none;
     float: right;
@@ -91,6 +103,39 @@ nav a.nav-link {
     display: none;
   }
   nav a.nav-link {
-    @apply inline-block mt-0;
+    @apply inline-block mt-1 py-2 px-4 relative z-0 text-base;
+
+    &:before {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 1px;
+      height: 0px;
+      background: black;
+      content: "";
+      opacity: 1;
+      transition: all 0.3s;
+    }
+
+    &:after {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 1px;
+      background: black;
+      content: "";
+      opacity: 1;
+      transition: all 0.3s;
+    }
+
+    &:hover:before {
+      height: 100%;
+    }
+
+    &:hover:after {
+      opacity: 0;
+      top: 100%;
+    }
   }
 }
