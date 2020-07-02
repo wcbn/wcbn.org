@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'wcbn_cms',
     'readback',
     'ionicons',
+    'trix',
     'captcha',
     'django.contrib.admin',
     'django.contrib.auth',
