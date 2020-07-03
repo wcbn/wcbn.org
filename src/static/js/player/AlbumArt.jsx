@@ -18,7 +18,7 @@ function AlbumArt(props) {
   useEffect(() => {
     async function getArtworkURL() {
       console.log("getting artwork")
-      fetch(buildItunesURL(song))
+      fetch(buildItunesURL(song), { mode: "cors" })
         .then((r) => r.json())
         .then((data) => {
           const { results } = data
@@ -26,6 +26,9 @@ function AlbumArt(props) {
           const imageSrc =
             firstResult != null ? firstResult.artworkUrl100 : null
           setImageSrc(imageSrc)
+        })
+        .catch((reason) => {
+          console.log(reason)
         })
     }
     getArtworkURL()
