@@ -3,9 +3,9 @@
   
   <nav class="container">
    
-    <a id="wcbn-logo" href="{% url 'wcbn_core:homepage' %}">
+    {% comment %} <a id="wcbn-logo" href="{% url 'wcbn_core:homepage' %}">
       <img src='{% static "img/logo.png" %}' alt="WCBN Logo" />
-    </a>
+    </a> {% endcomment %}
 
     <input id="nav-toggle-input" type="checkbox" />
     <label id="nav-toggle-label" for="nav-toggle-input"><span id="nav-toggle-icon"></span></label>    
@@ -13,8 +13,10 @@
     <div id="nav-options">
       
       <div id="nav-links-wrapper">
-        <a class="nav-link" href="{% url 'about' %}">About</a><a class="nav-link" href="{% url 'contact' %}">Contact</a><a class="nav-link" href="{% url 'readback:schedule' %}">Schedule</a><a class="nav-link" href="{% url 'readback:playlist' %}">Playlist</a>
+        <a class="nav-link" href="{% url 'wcbn_core:homepage' %}">WCBN</a><a class="nav-link" href="{% url 'about' %}">About</a><a class="nav-link" href="{% url 'contact' %}">Contact</a><a class="nav-link" href="{% url 'readback:schedule' %}">Schedule</a><a class="nav-link" href="{% url 'readback:playlist' %}">Playlist</a><a class="nav-link" href="#">Events</a><a class="nav-link" href="#">Concerts</a><a class="nav-link" href="#">Sports</a>
       </div>
+
+      <div class="flex-grow"></div>
 
       <div>
         {% if user.is_authenticated %}

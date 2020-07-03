@@ -1,5 +1,5 @@
 nav {
-  @apply flex items-center justify-between flex-wrap p-4 m-auto;
+  @apply flex items-center justify-end flex-wrap p-4 m-auto;
 }
 
 #wcbn-logo {
@@ -89,8 +89,10 @@ nav a.nav-link {
 }
 
 @screen lg {
-  #nav-links-wrapper {
-    @apply flex-grow;
+  
+
+  nav {
+    @apply pb-0;
   }
 
   nav #nav-options {
@@ -103,7 +105,7 @@ nav a.nav-link {
     display: none;
   }
   nav a.nav-link {
-    @apply inline-block mt-1 py-2 px-4 relative z-0 text-base;
+    @apply inline-block py-2 px-4 relative z-0 text-base;
 
     &:before {
       position: absolute;
