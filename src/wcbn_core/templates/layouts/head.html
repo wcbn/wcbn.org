@@ -9,7 +9,7 @@
   <link rel="shortcut icon" type="image/png" href='{% static "img/favicon.ico" %}' />
 
   <script src='{% static "dist/index.bundle.js" %}'></script>
-  <script defer src='{% static "dist/player.bundle.js" %}'></script>
+  <script defer crossorigin="anonymous" src='{% static "dist/player.bundle.js" %}'></script>
   
   {% ifequal ENV "app.environments.development" %}
   <script src='{% static "dist/styles.bundle.js" %}'></script>
