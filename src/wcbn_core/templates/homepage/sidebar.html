@@ -37,10 +37,12 @@
   </section>
 
   <section id="wcbn-twitter-widget">
+    {% if 'prod' in ENV %}
     <div style="height: 500px">
       <a class="twitter-timeline" data-height="500" data-chrome="transparent" data-dnt="true" href="https://twitter.com/WCBN_FM?ref_src=twsrc%5Etfw"></a>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div> 
+    {% endif %}
   </section>
 
 </aside>
