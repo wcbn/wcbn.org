@@ -20,7 +20,7 @@ body {
 }
 
 .generic-link {
-  @apply text-blue-700;
+  @apply text-blue-500;
 }
 .generic-link:hover {
   @apply underline;
