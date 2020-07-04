@@ -18,7 +18,7 @@
     }
 
     img {
-      @apply p-1 m-auto;
+      @apply py-1 m-auto object-cover w-full;
       max-height: 25rem;
     }
   }
