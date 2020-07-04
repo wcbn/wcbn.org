@@ -1,9 +1,13 @@
-{% for o in object_list %}
-
-<div class="break-words">
-<h2>{{o}}</h2>
-<hr>
-<p>{{o.author}} -- {{o.created_at}}</p>
-<p>{{o.text|safe}}</p>
+<div id="article-list">
+  {% for o in object_list %}
+  <article>
+    <h1>{{o}}</h1>
+    <h2><span>By {{o.author}}</span><time>{{o.published_at}}</time></h2>
+    <div>
+      <img src="{{o.featured_image.url}}"></img>
+      <div class="article-body">{{o.text|safe}}</div>
+    </div>
+  </article>
+  <hr>
+  {% endfor %}
 </div>
-{% endfor %}

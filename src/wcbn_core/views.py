@@ -13,6 +13,7 @@ def get_on_air():
 class IndexView(ListView):
     template_name = 'homepage/homepage.html'
     model = Article
+    ordering = ['-published_at']
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
