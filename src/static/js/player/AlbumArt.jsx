@@ -2,12 +2,17 @@ import * as React from "react"
 import { useState, useEffect } from "react"
 import Zoom from "react-medium-image-zoom"
 
+window.handleItunes = (resp) => {
+  console.log("handling" + resp)
+}
+
 function buildItunesURL(song) {
   console.log("getting itunes url")
   const { album, artist } = song
   return (
-    "https://itunes.apple.com/search?limit=1&version=2&entity=album&" +
-    `term=${encodeURIComponent(`${album} ${artist}`)}`
+    "https://itunes.apple.com/search?limit=1&entity=album&" +
+    `term=${encodeURIComponent(`${album} ${artist}`)}&` +
+    `callback="handleItunes"`
   )
 }
 
@@ -18,17 +23,17 @@ function AlbumArt(props) {
   useEffect(() => {
     async function getArtworkURL() {
       console.log("getting artwork")
-      fetch(buildItunesURL(song), { mode: "cors" })
-        .then((r) => r.json())
-        .then((data) => {
-          const { results } = data
-          const [firstResult] = results
-          const imageSrc =
-            firstResult != null ? firstResult.artworkUrl100 : null
-          setImageSrc(imageSrc)
-        })
+      fetch(buildItunesURL(song))
+        // .then((r) => r.json())
+        // .then((data) => {
+        //   const { results } = data
+        //   const [firstResult] = results
+        //   const imageSrc =
+        //     firstResult != null ? firstResult.artworkUrl100 : null
+        //   setImageSrc(imageSrc)
+        // })
         .catch((reason) => {
-          console.log(reason)
+          console.log("Cant get album art: " + reason)
         })
     }
     getArtworkURL()
