@@ -13,6 +13,8 @@
 
   .event-listing {
 
+    @apply mb-4;
+
       p {
         @apply italic text-sm;
       }
