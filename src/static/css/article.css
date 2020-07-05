@@ -1,0 +1,29 @@
+#article-list {
+  article {
+    h1 {
+      @apply text-2xl font-bold;
+    }
+    h2 {
+      @apply flex justify-between text-sm font-semibold italic text-right;
+    }
+
+    .article-body {
+      a {
+        @apply text-blue-500;
+
+        &:hover {
+          @apply underline;
+        }
+      }
+    }
+
+    img {
+      @apply py-1 m-auto object-cover w-full;
+      max-height: 25rem;
+    }
+  }
+
+  hr {
+    @apply my-4;
+  }
+}

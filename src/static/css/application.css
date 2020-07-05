@@ -1,5 +1,6 @@
 @tailwind base;
 @tailwind components;
+@import "./article.css";
 @import "./forms.css";
 @import "./header.css";
 @import "./messages.css";
@@ -20,7 +21,7 @@ body {
 }
 
 .generic-link {
-  @apply text-blue-700;
+  @apply text-blue-500;
 }
 .generic-link:hover {
   @apply underline;

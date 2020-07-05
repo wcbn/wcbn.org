@@ -7,6 +7,7 @@ class Article(models.Model):
     title = models.CharField(max_length=140)
     text = models.TextField()
     author = models.CharField(max_length=100)
+    featured_image = models.ImageField(upload_to='article_images', null=True)
 
     # created_by = models.ForeignKey(User)
     # updated_by = models.ForeignKey(User)
