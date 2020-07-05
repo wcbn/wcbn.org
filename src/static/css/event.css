@@ -1,0 +1,21 @@
+#event-list {
+
+  h2 {
+    @apply font-semibold text-lg mt-2 text-blue-500;
+  }
+
+  h3 {
+    @apply font-semibold text-xl mt-1;
+  }
+
+  hr {
+  }
+
+  .event-listing {
+
+      p {
+        @apply italic text-sm;
+      }
+    
+  }
+}

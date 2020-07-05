@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @import "./article.css";
+@import "./event.css";
 @import "./forms.css";
 @import "./header.css";
 @import "./messages.css";
@@ -17,7 +18,7 @@ body {
 }
 
 .heading {
-  @apply text-3xl;
+  @apply text-3xl font-bold;
 }
 
 .generic-link {

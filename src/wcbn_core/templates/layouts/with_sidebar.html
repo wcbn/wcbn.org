@@ -1,0 +1,11 @@
+{% extends "layouts/application.html" %}
+
+{% block content%}
+
+<div class="flex justify-between">
+  <main class="w-full pr-4">
+  {% include partial %}
+  </main>
+  {% include "homepage/sidebar.html" %}
+</div>
+{% endblock %}

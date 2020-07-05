@@ -1,0 +1,25 @@
+{% load format_event_time %} 
+<div id="event-list">
+  <h1 class="heading">Upcoming Events</h1>
+  {% for o in object_list %}
+  {% ifchanged o.start_date %}
+  <h2>{{o.start_date|date:"l, N jS"}}</h2>  
+  <hr>
+  {% endifchanged %}
+  <div class="event-listing">
+    <h3>{{o.title}}</h3>
+    {% with o|format_event_time as formatted_time %}
+      {% if formatted_time and o.location_name %}
+        <p>{{formatted_time}} at {{o.location_name}}</p>
+      {% elif formatted_time %}
+        <p>{{formatted_time}}</p>
+      {% elif o.location_name %}
+        <p>At: {{o.location_name}}</p>
+      {% endif %}
+    {% endwith %}
+    <div>
+      <div class="event-body">{{o.summary|safe}}</div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
