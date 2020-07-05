@@ -1,6 +1,6 @@
 {% load format_event_time %} 
 <div id="event-list">
-  <h1 class="heading">Upcoming Events</h1>
+  <h1 class="heading">{{title}}</h1>
   {% for o in object_list %}
   {% ifchanged o.start_date %}
   <h2>{{o.start_date|date:"l, N jS"}}</h2>  

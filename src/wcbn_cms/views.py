@@ -16,7 +16,9 @@ class EventsListView(ListView):
     def get_context_data(self, **kwargs):
         ctx = super().get_context_data(**kwargs)
         ctx['partial'] = "events/list.html"
+        ctx['title'] = "Upcoming Events"
         return ctx
+
 
 class ConcertListView(ListView):
     template_name = "layouts/with_sidebar.html"
@@ -26,4 +28,5 @@ class ConcertListView(ListView):
     def get_context_data(self, **kwargs):
         ctx = super().get_context_data(**kwargs)
         ctx['partial'] = "events/list.html"
+        ctx['title'] = "Upcoming Concerts"
         return ctx
