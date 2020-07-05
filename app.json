@@ -9,7 +9,7 @@
   "name": "WCBN",
   "repository": "https://github.com/wcbn/wcbn.org",
   "scripts": {
-    "postdeploy": "echo \"from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('admin@wcbn.org', '$PR_REVIEW_PW')\" | python manage.py shell; ./manage.py loaddata flatpages;"
+    "postdeploy": "echo \"from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('admin@wcbn.org', '$PR_REVIEW_PW')\" | python manage.py shell; ./manage.py loaddata flatpages concerts;"
   },
   "stack": "container",
   "website": "https://wcbn.org/"
