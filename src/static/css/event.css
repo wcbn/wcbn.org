@@ -18,6 +18,14 @@
       p {
         @apply italic text-sm;
       }
+
+      a {
+        @apply text-blue-500;
+
+        &:hover {
+          @apply underline;
+        }
+      }
     
   }
 }

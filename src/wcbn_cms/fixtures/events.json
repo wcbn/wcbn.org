@@ -1,0 +1,257 @@
+[
+  {
+    "model": "wcbn_cms.event",
+    "fields": {
+      "title": "Top of the Park",
+      "summary": "<div>Top of the Park (TOP) is an annual admission free outdoor music and movie series produced by the <a href=\"https://localwiki.org/ann-arbor/Ann_Arbor_Summer_Festival\">Ann Arbor Summer Festival</a> and held on the campus of the University of Michigan in downtown Ann Arbor. Top of the Park, the festival's outdoor series, began in 1983 as a way to maintain local business activity in the traditionally slow period between the end of the University semester and <a href=\"https://localwiki.org/ann-arbor/Art_Fair\">Art Fair season</a>. The festival runs the last two weeks of June through the first week of July, attracting a diverse audience of 60,000 annually.<br><br>For its first 24 years, <strong>TOP</strong> was held on top of the parking structure between the <a href=\"https://localwiki.org/ann-arbor/Power_Center\">Power Center</a> and the <a href=\"https://localwiki.org/ann-arbor/Dental_School\">Dental School</a> (thus the name), but in 2007 it moved one block west to <a href=\"https://localwiki.org/ann-arbor/Ingalls_Mall\">Ingalls Mall</a>. The main stage is set up on the front steps of the <a href=\"https://localwiki.org/ann-arbor/Rackham_Graduate_School\">Rackham Graduate School</a>, while other facilities such as public toilets, the \"KidZone\" play area and food and beverage stalls are placed more or less on the periphery of the mall's central grassy area.<br><br>During the three and one-half weeks that <strong>TOP</strong> runs, there can be as many as fifty bands performing outside on Ingalls Mall. Performers have included popular rock bands, emerging local artists and touring international acts. Entertainment in recent years has also included specialty acts like an avant-garde aerial acrobatic troupe as must-see draws, as well as the \"Rock the Mall\" teen music competition. In addition, as many as sixteen movies, usually a mix of recent and classic popular hits, are projected on the stage after nightfall Sunday through Thursday nights.</div>",
+      "featured_image": "",
+      "start_date": "2020-06-01",
+      "start_time": null,
+      "end_date": "2020-07-05",
+      "end_time": null,
+      "location_name": "West Ingalls Mall",
+      "location_address": null,
+      "url": "http://a2sf.org",
+      "age_restriction": "21+ for beer garden",
+      "presented_by_wcbn": true
+    }
+  },
+  {
+    "model": "wcbn_cms.event",
+    "fields": {
+      "title": "Top of the Park",
+      "summary": "<div>Top of the Park (TOP) is an annual admission free outdoor music and movie series produced by the <a href=\"https://localwiki.org/ann-arbor/Ann_Arbor_Summer_Festival\">Ann Arbor Summer Festival</a> and held on the campus of the University of Michigan in downtown Ann Arbor. Top of the Park, the festival's outdoor series, began in 1983 as a way to maintain local business activity in the traditionally slow period between the end of the University semester and <a href=\"https://localwiki.org/ann-arbor/Art_Fair\">Art Fair season</a>. The festival runs the last two weeks of June through the first week of July, attracting a diverse audience of 60,000 annually.<br><br>For its first 24 years, <strong>TOP</strong> was held on top of the parking structure between the <a href=\"https://localwiki.org/ann-arbor/Power_Center\">Power Center</a> and the <a href=\"https://localwiki.org/ann-arbor/Dental_School\">Dental School</a> (thus the name), but in 2007 it moved one block west to <a href=\"https://localwiki.org/ann-arbor/Ingalls_Mall\">Ingalls Mall</a>. The main stage is set up on the front steps of the <a href=\"https://localwiki.org/ann-arbor/Rackham_Graduate_School\">Rackham Graduate School</a>, while other facilities such as public toilets, the \"KidZone\" play area and food and beverage stalls are placed more or less on the periphery of the mall's central grassy area.<br><br>During the three and one-half weeks that <strong>TOP</strong> runs, there can be as many as fifty bands performing outside on Ingalls Mall. Performers have included popular rock bands, emerging local artists and touring international acts. Entertainment in recent years has also included specialty acts like an avant-garde aerial acrobatic troupe as must-see draws, as well as the \"Rock the Mall\" teen music competition. In addition, as many as sixteen movies, usually a mix of recent and classic popular hits, are projected on the stage after nightfall Sunday through Thursday nights.</div>",
+      "featured_image": "",
+      "start_date": "2020-06-01",
+      "start_time": null,
+      "end_date": "2020-07-05",
+      "end_time": null,
+      "location_name": "West Ingalls Mall",
+      "location_address": null,
+      "url": "http://a2sf.org",
+      "age_restriction": "21+ for beer garden",
+      "presented_by_wcbn": true
+    }
+  },
+  {
+    "model": "wcbn_cms.event",
+    "fields": {
+      "title": "Top of the Park",
+      "summary": "<div>Top of the Park (TOP) is an annual admission free outdoor music and movie series produced by the <a href=\"https://localwiki.org/ann-arbor/Ann_Arbor_Summer_Festival\">Ann Arbor Summer Festival</a> and held on the campus of the University of Michigan in downtown Ann Arbor. Top of the Park, the festival's outdoor series, began in 1983 as a way to maintain local business activity in the traditionally slow period between the end of the University semester and <a href=\"https://localwiki.org/ann-arbor/Art_Fair\">Art Fair season</a>. The festival runs the last two weeks of June through the first week of July, attracting a diverse audience of 60,000 annually.<br><br>For its first 24 years, <strong>TOP</strong> was held on top of the parking structure between the <a href=\"https://localwiki.org/ann-arbor/Power_Center\">Power Center</a> and the <a href=\"https://localwiki.org/ann-arbor/Dental_School\">Dental School</a> (thus the name), but in 2007 it moved one block west to <a href=\"https://localwiki.org/ann-arbor/Ingalls_Mall\">Ingalls Mall</a>. The main stage is set up on the front steps of the <a href=\"https://localwiki.org/ann-arbor/Rackham_Graduate_School\">Rackham Graduate School</a>, while other facilities such as public toilets, the \"KidZone\" play area and food and beverage stalls are placed more or less on the periphery of the mall's central grassy area.<br><br>During the three and one-half weeks that <strong>TOP</strong> runs, there can be as many as fifty bands performing outside on Ingalls Mall. Performers have included popular rock bands, emerging local artists and touring international acts. Entertainment in recent years has also included specialty acts like an avant-garde aerial acrobatic troupe as must-see draws, as well as the \"Rock the Mall\" teen music competition. In addition, as many as sixteen movies, usually a mix of recent and classic popular hits, are projected on the stage after nightfall Sunday through Thursday nights.</div>",
+      "featured_image": "",
+      "start_date": "2020-06-01",
+      "start_time": null,
+      "end_date": "2020-07-05",
+      "end_time": null,
+      "location_name": "West Ingalls Mall",
+      "location_address": null,
+      "url": "http://a2sf.org",
+      "age_restriction": "21+ for beer garden",
+      "presented_by_wcbn": true
+    }
+  },
+  {
+    "model": "wcbn_cms.event",
+    "fields": {
+      "title": "Top of the Park",
+      "summary": "<div>Top of the Park (TOP) is an annual admission free outdoor music and movie series produced by the <a href=\"https://localwiki.org/ann-arbor/Ann_Arbor_Summer_Festival\">Ann Arbor Summer Festival</a> and held on the campus of the University of Michigan in downtown Ann Arbor. Top of the Park, the festival's outdoor series, began in 1983 as a way to maintain local business activity in the traditionally slow period between the end of the University semester and <a href=\"https://localwiki.org/ann-arbor/Art_Fair\">Art Fair season</a>. The festival runs the last two weeks of June through the first week of July, attracting a diverse audience of 60,000 annually.<br><br>For its first 24 years, <strong>TOP</strong> was held on top of the parking structure between the <a href=\"https://localwiki.org/ann-arbor/Power_Center\">Power Center</a> and the <a href=\"https://localwiki.org/ann-arbor/Dental_School\">Dental School</a> (thus the name), but in 2007 it moved one block west to <a href=\"https://localwiki.org/ann-arbor/Ingalls_Mall\">Ingalls Mall</a>. The main stage is set up on the front steps of the <a href=\"https://localwiki.org/ann-arbor/Rackham_Graduate_School\">Rackham Graduate School</a>, while other facilities such as public toilets, the \"KidZone\" play area and food and beverage stalls are placed more or less on the periphery of the mall's central grassy area.<br><br>During the three and one-half weeks that <strong>TOP</strong> runs, there can be as many as fifty bands performing outside on Ingalls Mall. Performers have included popular rock bands, emerging local artists and touring international acts. Entertainment in recent years has also included specialty acts like an avant-garde aerial acrobatic troupe as must-see draws, as well as the \"Rock the Mall\" teen music competition. In addition, as many as sixteen movies, usually a mix of recent and classic popular hits, are projected on the stage after nightfall Sunday through Thursday nights.</div>",
+      "featured_image": "",
+      "start_date": "2020-06-01",
+      "start_time": null,
+      "end_date": "2020-07-05",
+      "end_time": null,
+      "location_name": "West Ingalls Mall",
+      "location_address": null,
+      "url": "http://a2sf.org",
+      "age_restriction": "21+ for beer garden",
+      "presented_by_wcbn": true
+    }
+  },
+  {
+    "model": "wcbn_cms.event",
+    "fields": {
+      "title": "Top of the Park",
+      "summary": "<div>Top of the Park (TOP) is an annual admission free outdoor music and movie series produced by the <a href=\"https://localwiki.org/ann-arbor/Ann_Arbor_Summer_Festival\">Ann Arbor Summer Festival</a> and held on the campus of the University of Michigan in downtown Ann Arbor. Top of the Park, the festival's outdoor series, began in 1983 as a way to maintain local business activity in the traditionally slow period between the end of the University semester and <a href=\"https://localwiki.org/ann-arbor/Art_Fair\">Art Fair season</a>. The festival runs the last two weeks of June through the first week of July, attracting a diverse audience of 60,000 annually.<br><br>For its first 24 years, <strong>TOP</strong> was held on top of the parking structure between the <a href=\"https://localwiki.org/ann-arbor/Power_Center\">Power Center</a> and the <a href=\"https://localwiki.org/ann-arbor/Dental_School\">Dental School</a> (thus the name), but in 2007 it moved one block west to <a href=\"https://localwiki.org/ann-arbor/Ingalls_Mall\">Ingalls Mall</a>. The main stage is set up on the front steps of the <a href=\"https://localwiki.org/ann-arbor/Rackham_Graduate_School\">Rackham Graduate School</a>, while other facilities such as public toilets, the \"KidZone\" play area and food and beverage stalls are placed more or less on the periphery of the mall's central grassy area.<br><br>During the three and one-half weeks that <strong>TOP</strong> runs, there can be as many as fifty bands performing outside on Ingalls Mall. Performers have included popular rock bands, emerging local artists and touring international acts. Entertainment in recent years has also included specialty acts like an avant-garde aerial acrobatic troupe as must-see draws, as well as the \"Rock the Mall\" teen music competition. In addition, as many as sixteen movies, usually a mix of recent and classic popular hits, are projected on the stage after nightfall Sunday through Thursday nights.</div>",
+      "featured_image": "",
+      "start_date": "2020-06-01",
+      "start_time": null,
+      "end_date": "2020-07-05",
+      "end_time": null,
+      "location_name": "West Ingalls Mall",
+      "location_address": null,
+      "url": "http://a2sf.org",
+      "age_restriction": "21+ for beer garden",
+      "presented_by_wcbn": true
+    }
+  },
+  {
+    "model": "wcbn_cms.event",
+    "fields": {
+      "title": "Top of the Park",
+      "summary": "<div>Top of the Park (TOP) is an annual admission free outdoor music and movie series produced by the <a href=\"https://localwiki.org/ann-arbor/Ann_Arbor_Summer_Festival\">Ann Arbor Summer Festival</a> and held on the campus of the University of Michigan in downtown Ann Arbor. Top of the Park, the festival's outdoor series, began in 1983 as a way to maintain local business activity in the traditionally slow period between the end of the University semester and <a href=\"https://localwiki.org/ann-arbor/Art_Fair\">Art Fair season</a>. The festival runs the last two weeks of June through the first week of July, attracting a diverse audience of 60,000 annually.<br><br>For its first 24 years, <strong>TOP</strong> was held on top of the parking structure between the <a href=\"https://localwiki.org/ann-arbor/Power_Center\">Power Center</a> and the <a href=\"https://localwiki.org/ann-arbor/Dental_School\">Dental School</a> (thus the name), but in 2007 it moved one block west to <a href=\"https://localwiki.org/ann-arbor/Ingalls_Mall\">Ingalls Mall</a>. The main stage is set up on the front steps of the <a href=\"https://localwiki.org/ann-arbor/Rackham_Graduate_School\">Rackham Graduate School</a>, while other facilities such as public toilets, the \"KidZone\" play area and food and beverage stalls are placed more or less on the periphery of the mall's central grassy area.<br><br>During the three and one-half weeks that <strong>TOP</strong> runs, there can be as many as fifty bands performing outside on Ingalls Mall. Performers have included popular rock bands, emerging local artists and touring international acts. Entertainment in recent years has also included specialty acts like an avant-garde aerial acrobatic troupe as must-see draws, as well as the \"Rock the Mall\" teen music competition. In addition, as many as sixteen movies, usually a mix of recent and classic popular hits, are projected on the stage after nightfall Sunday through Thursday nights.</div>",
+      "featured_image": "",
+      "start_date": "2020-06-01",
+      "start_time": null,
+      "end_date": "2020-07-05",
+      "end_time": null,
+      "location_name": "West Ingalls Mall",
+      "location_address": null,
+      "url": "http://a2sf.org",
+      "age_restriction": "21+ for beer garden",
+      "presented_by_wcbn": true
+    }
+  },
+  {
+    "model": "wcbn_cms.event",
+    "fields": {
+      "title": "Top of the Park",
+      "summary": "<div>Top of the Park (TOP) is an annual admission free outdoor music and movie series produced by the <a href=\"https://localwiki.org/ann-arbor/Ann_Arbor_Summer_Festival\">Ann Arbor Summer Festival</a> and held on the campus of the University of Michigan in downtown Ann Arbor. Top of the Park, the festival's outdoor series, began in 1983 as a way to maintain local business activity in the traditionally slow period between the end of the University semester and <a href=\"https://localwiki.org/ann-arbor/Art_Fair\">Art Fair season</a>. The festival runs the last two weeks of June through the first week of July, attracting a diverse audience of 60,000 annually.<br><br>For its first 24 years, <strong>TOP</strong> was held on top of the parking structure between the <a href=\"https://localwiki.org/ann-arbor/Power_Center\">Power Center</a> and the <a href=\"https://localwiki.org/ann-arbor/Dental_School\">Dental School</a> (thus the name), but in 2007 it moved one block west to <a href=\"https://localwiki.org/ann-arbor/Ingalls_Mall\">Ingalls Mall</a>. The main stage is set up on the front steps of the <a href=\"https://localwiki.org/ann-arbor/Rackham_Graduate_School\">Rackham Graduate School</a>, while other facilities such as public toilets, the \"KidZone\" play area and food and beverage stalls are placed more or less on the periphery of the mall's central grassy area.<br><br>During the three and one-half weeks that <strong>TOP</strong> runs, there can be as many as fifty bands performing outside on Ingalls Mall. Performers have included popular rock bands, emerging local artists and touring international acts. Entertainment in recent years has also included specialty acts like an avant-garde aerial acrobatic troupe as must-see draws, as well as the \"Rock the Mall\" teen music competition. In addition, as many as sixteen movies, usually a mix of recent and classic popular hits, are projected on the stage after nightfall Sunday through Thursday nights.</div>",
+      "featured_image": "",
+      "start_date": "2020-06-01",
+      "start_time": null,
+      "end_date": "2020-07-05",
+      "end_time": null,
+      "location_name": "West Ingalls Mall",
+      "location_address": null,
+      "url": "http://a2sf.org",
+      "age_restriction": "21+ for beer garden",
+      "presented_by_wcbn": true
+    }
+  },
+  {
+    "model": "wcbn_cms.event",
+    "fields": {
+      "title": "Top of the Park",
+      "summary": "<div>Top of the Park (TOP) is an annual admission free outdoor music and movie series produced by the <a href=\"https://localwiki.org/ann-arbor/Ann_Arbor_Summer_Festival\">Ann Arbor Summer Festival</a> and held on the campus of the University of Michigan in downtown Ann Arbor. Top of the Park, the festival's outdoor series, began in 1983 as a way to maintain local business activity in the traditionally slow period between the end of the University semester and <a href=\"https://localwiki.org/ann-arbor/Art_Fair\">Art Fair season</a>. The festival runs the last two weeks of June through the first week of July, attracting a diverse audience of 60,000 annually.<br><br>For its first 24 years, <strong>TOP</strong> was held on top of the parking structure between the <a href=\"https://localwiki.org/ann-arbor/Power_Center\">Power Center</a> and the <a href=\"https://localwiki.org/ann-arbor/Dental_School\">Dental School</a> (thus the name), but in 2007 it moved one block west to <a href=\"https://localwiki.org/ann-arbor/Ingalls_Mall\">Ingalls Mall</a>. The main stage is set up on the front steps of the <a href=\"https://localwiki.org/ann-arbor/Rackham_Graduate_School\">Rackham Graduate School</a>, while other facilities such as public toilets, the \"KidZone\" play area and food and beverage stalls are placed more or less on the periphery of the mall's central grassy area.<br><br>During the three and one-half weeks that <strong>TOP</strong> runs, there can be as many as fifty bands performing outside on Ingalls Mall. Performers have included popular rock bands, emerging local artists and touring international acts. Entertainment in recent years has also included specialty acts like an avant-garde aerial acrobatic troupe as must-see draws, as well as the \"Rock the Mall\" teen music competition. In addition, as many as sixteen movies, usually a mix of recent and classic popular hits, are projected on the stage after nightfall Sunday through Thursday nights.</div>",
+      "featured_image": "",
+      "start_date": "2020-06-01",
+      "start_time": null,
+      "end_date": "2020-07-05",
+      "end_time": null,
+      "location_name": "West Ingalls Mall",
+      "location_address": null,
+      "url": "http://a2sf.org",
+      "age_restriction": "21+ for beer garden",
+      "presented_by_wcbn": true
+    }
+  },
+  {
+    "model": "wcbn_cms.event",
+    "fields": {
+      "title": "Top of the Park",
+      "summary": "<div>Top of the Park (TOP) is an annual admission free outdoor music and movie series produced by the <a href=\"https://localwiki.org/ann-arbor/Ann_Arbor_Summer_Festival\">Ann Arbor Summer Festival</a> and held on the campus of the University of Michigan in downtown Ann Arbor. Top of the Park, the festival's outdoor series, began in 1983 as a way to maintain local business activity in the traditionally slow period between the end of the University semester and <a href=\"https://localwiki.org/ann-arbor/Art_Fair\">Art Fair season</a>. The festival runs the last two weeks of June through the first week of July, attracting a diverse audience of 60,000 annually.<br><br>For its first 24 years, <strong>TOP</strong> was held on top of the parking structure between the <a href=\"https://localwiki.org/ann-arbor/Power_Center\">Power Center</a> and the <a href=\"https://localwiki.org/ann-arbor/Dental_School\">Dental School</a> (thus the name), but in 2007 it moved one block west to <a href=\"https://localwiki.org/ann-arbor/Ingalls_Mall\">Ingalls Mall</a>. The main stage is set up on the front steps of the <a href=\"https://localwiki.org/ann-arbor/Rackham_Graduate_School\">Rackham Graduate School</a>, while other facilities such as public toilets, the \"KidZone\" play area and food and beverage stalls are placed more or less on the periphery of the mall's central grassy area.<br><br>During the three and one-half weeks that <strong>TOP</strong> runs, there can be as many as fifty bands performing outside on Ingalls Mall. Performers have included popular rock bands, emerging local artists and touring international acts. Entertainment in recent years has also included specialty acts like an avant-garde aerial acrobatic troupe as must-see draws, as well as the \"Rock the Mall\" teen music competition. In addition, as many as sixteen movies, usually a mix of recent and classic popular hits, are projected on the stage after nightfall Sunday through Thursday nights.</div>",
+      "featured_image": "",
+      "start_date": "2020-06-01",
+      "start_time": null,
+      "end_date": "2020-07-05",
+      "end_time": null,
+      "location_name": "West Ingalls Mall",
+      "location_address": null,
+      "url": "http://a2sf.org",
+      "age_restriction": "21+ for beer garden",
+      "presented_by_wcbn": true
+    }
+  },
+  {
+    "model": "wcbn_cms.event",
+    "fields": {
+      "title": "Top of the Park",
+      "summary": "<div>Top of the Park (TOP) is an annual admission free outdoor music and movie series produced by the <a href=\"https://localwiki.org/ann-arbor/Ann_Arbor_Summer_Festival\">Ann Arbor Summer Festival</a> and held on the campus of the University of Michigan in downtown Ann Arbor. Top of the Park, the festival's outdoor series, began in 1983 as a way to maintain local business activity in the traditionally slow period between the end of the University semester and <a href=\"https://localwiki.org/ann-arbor/Art_Fair\">Art Fair season</a>. The festival runs the last two weeks of June through the first week of July, attracting a diverse audience of 60,000 annually.<br><br>For its first 24 years, <strong>TOP</strong> was held on top of the parking structure between the <a href=\"https://localwiki.org/ann-arbor/Power_Center\">Power Center</a> and the <a href=\"https://localwiki.org/ann-arbor/Dental_School\">Dental School</a> (thus the name), but in 2007 it moved one block west to <a href=\"https://localwiki.org/ann-arbor/Ingalls_Mall\">Ingalls Mall</a>. The main stage is set up on the front steps of the <a href=\"https://localwiki.org/ann-arbor/Rackham_Graduate_School\">Rackham Graduate School</a>, while other facilities such as public toilets, the \"KidZone\" play area and food and beverage stalls are placed more or less on the periphery of the mall's central grassy area.<br><br>During the three and one-half weeks that <strong>TOP</strong> runs, there can be as many as fifty bands performing outside on Ingalls Mall. Performers have included popular rock bands, emerging local artists and touring international acts. Entertainment in recent years has also included specialty acts like an avant-garde aerial acrobatic troupe as must-see draws, as well as the \"Rock the Mall\" teen music competition. In addition, as many as sixteen movies, usually a mix of recent and classic popular hits, are projected on the stage after nightfall Sunday through Thursday nights.</div>",
+      "featured_image": "",
+      "start_date": "2020-06-01",
+      "start_time": null,
+      "end_date": "2020-07-05",
+      "end_time": null,
+      "location_name": "West Ingalls Mall",
+      "location_address": null,
+      "url": "http://a2sf.org",
+      "age_restriction": "21+ for beer garden",
+      "presented_by_wcbn": true
+    }
+  },
+  {
+    "model": "wcbn_cms.event",
+    "fields": {
+      "title": "Top of the Park",
+      "summary": "<div>Top of the Park (TOP) is an annual admission free outdoor music and movie series produced by the <a href=\"https://localwiki.org/ann-arbor/Ann_Arbor_Summer_Festival\">Ann Arbor Summer Festival</a> and held on the campus of the University of Michigan in downtown Ann Arbor. Top of the Park, the festival's outdoor series, began in 1983 as a way to maintain local business activity in the traditionally slow period between the end of the University semester and <a href=\"https://localwiki.org/ann-arbor/Art_Fair\">Art Fair season</a>. The festival runs the last two weeks of June through the first week of July, attracting a diverse audience of 60,000 annually.<br><br>For its first 24 years, <strong>TOP</strong> was held on top of the parking structure between the <a href=\"https://localwiki.org/ann-arbor/Power_Center\">Power Center</a> and the <a href=\"https://localwiki.org/ann-arbor/Dental_School\">Dental School</a> (thus the name), but in 2007 it moved one block west to <a href=\"https://localwiki.org/ann-arbor/Ingalls_Mall\">Ingalls Mall</a>. The main stage is set up on the front steps of the <a href=\"https://localwiki.org/ann-arbor/Rackham_Graduate_School\">Rackham Graduate School</a>, while other facilities such as public toilets, the \"KidZone\" play area and food and beverage stalls are placed more or less on the periphery of the mall's central grassy area.<br><br>During the three and one-half weeks that <strong>TOP</strong> runs, there can be as many as fifty bands performing outside on Ingalls Mall. Performers have included popular rock bands, emerging local artists and touring international acts. Entertainment in recent years has also included specialty acts like an avant-garde aerial acrobatic troupe as must-see draws, as well as the \"Rock the Mall\" teen music competition. In addition, as many as sixteen movies, usually a mix of recent and classic popular hits, are projected on the stage after nightfall Sunday through Thursday nights.</div>",
+      "featured_image": "",
+      "start_date": "2020-06-01",
+      "start_time": null,
+      "end_date": "2020-07-05",
+      "end_time": null,
+      "location_name": "West Ingalls Mall",
+      "location_address": null,
+      "url": "http://a2sf.org",
+      "age_restriction": "21+ for beer garden",
+      "presented_by_wcbn": true
+    }
+  },
+  {
+    "model": "wcbn_cms.event",
+    "fields": {
+      "title": "Top of the Park",
+      "summary": "<div>Top of the Park (TOP) is an annual admission free outdoor music and movie series produced by the <a href=\"https://localwiki.org/ann-arbor/Ann_Arbor_Summer_Festival\">Ann Arbor Summer Festival</a> and held on the campus of the University of Michigan in downtown Ann Arbor. Top of the Park, the festival's outdoor series, began in 1983 as a way to maintain local business activity in the traditionally slow period between the end of the University semester and <a href=\"https://localwiki.org/ann-arbor/Art_Fair\">Art Fair season</a>. The festival runs the last two weeks of June through the first week of July, attracting a diverse audience of 60,000 annually.<br><br>For its first 24 years, <strong>TOP</strong> was held on top of the parking structure between the <a href=\"https://localwiki.org/ann-arbor/Power_Center\">Power Center</a> and the <a href=\"https://localwiki.org/ann-arbor/Dental_School\">Dental School</a> (thus the name), but in 2007 it moved one block west to <a href=\"https://localwiki.org/ann-arbor/Ingalls_Mall\">Ingalls Mall</a>. The main stage is set up on the front steps of the <a href=\"https://localwiki.org/ann-arbor/Rackham_Graduate_School\">Rackham Graduate School</a>, while other facilities such as public toilets, the \"KidZone\" play area and food and beverage stalls are placed more or less on the periphery of the mall's central grassy area.<br><br>During the three and one-half weeks that <strong>TOP</strong> runs, there can be as many as fifty bands performing outside on Ingalls Mall. Performers have included popular rock bands, emerging local artists and touring international acts. Entertainment in recent years has also included specialty acts like an avant-garde aerial acrobatic troupe as must-see draws, as well as the \"Rock the Mall\" teen music competition. In addition, as many as sixteen movies, usually a mix of recent and classic popular hits, are projected on the stage after nightfall Sunday through Thursday nights.</div>",
+      "featured_image": "",
+      "start_date": "2020-06-01",
+      "start_time": null,
+      "end_date": "2020-07-05",
+      "end_time": null,
+      "location_name": "West Ingalls Mall",
+      "location_address": null,
+      "url": "http://a2sf.org",
+      "age_restriction": "21+ for beer garden",
+      "presented_by_wcbn": true
+    }
+  },
+  {
+    "model": "wcbn_cms.event",
+    "fields": {
+      "title": "Top of the Park",
+      "summary": "<div>Top of the Park (TOP) is an annual admission free outdoor music and movie series produced by the <a href=\"https://localwiki.org/ann-arbor/Ann_Arbor_Summer_Festival\">Ann Arbor Summer Festival</a> and held on the campus of the University of Michigan in downtown Ann Arbor. Top of the Park, the festival's outdoor series, began in 1983 as a way to maintain local business activity in the traditionally slow period between the end of the University semester and <a href=\"https://localwiki.org/ann-arbor/Art_Fair\">Art Fair season</a>. The festival runs the last two weeks of June through the first week of July, attracting a diverse audience of 60,000 annually.<br><br>For its first 24 years, <strong>TOP</strong> was held on top of the parking structure between the <a href=\"https://localwiki.org/ann-arbor/Power_Center\">Power Center</a> and the <a href=\"https://localwiki.org/ann-arbor/Dental_School\">Dental School</a> (thus the name), but in 2007 it moved one block west to <a href=\"https://localwiki.org/ann-arbor/Ingalls_Mall\">Ingalls Mall</a>. The main stage is set up on the front steps of the <a href=\"https://localwiki.org/ann-arbor/Rackham_Graduate_School\">Rackham Graduate School</a>, while other facilities such as public toilets, the \"KidZone\" play area and food and beverage stalls are placed more or less on the periphery of the mall's central grassy area.<br><br>During the three and one-half weeks that <strong>TOP</strong> runs, there can be as many as fifty bands performing outside on Ingalls Mall. Performers have included popular rock bands, emerging local artists and touring international acts. Entertainment in recent years has also included specialty acts like an avant-garde aerial acrobatic troupe as must-see draws, as well as the \"Rock the Mall\" teen music competition. In addition, as many as sixteen movies, usually a mix of recent and classic popular hits, are projected on the stage after nightfall Sunday through Thursday nights.</div>",
+      "featured_image": "",
+      "start_date": "2020-06-01",
+      "start_time": null,
+      "end_date": "2020-07-05",
+      "end_time": null,
+      "location_name": "West Ingalls Mall",
+      "location_address": null,
+      "url": "http://a2sf.org",
+      "age_restriction": "21+ for beer garden",
+      "presented_by_wcbn": true
+    }
+  },
+  {
+    "model": "wcbn_cms.event",
+    "fields": {
+      "title": "Top of the Park",
+      "summary": "<div>Top of the Park (TOP) is an annual admission free outdoor music and movie series produced by the <a href=\"https://localwiki.org/ann-arbor/Ann_Arbor_Summer_Festival\">Ann Arbor Summer Festival</a> and held on the campus of the University of Michigan in downtown Ann Arbor. Top of the Park, the festival's outdoor series, began in 1983 as a way to maintain local business activity in the traditionally slow period between the end of the University semester and <a href=\"https://localwiki.org/ann-arbor/Art_Fair\">Art Fair season</a>. The festival runs the last two weeks of June through the first week of July, attracting a diverse audience of 60,000 annually.<br><br>For its first 24 years, <strong>TOP</strong> was held on top of the parking structure between the <a href=\"https://localwiki.org/ann-arbor/Power_Center\">Power Center</a> and the <a href=\"https://localwiki.org/ann-arbor/Dental_School\">Dental School</a> (thus the name), but in 2007 it moved one block west to <a href=\"https://localwiki.org/ann-arbor/Ingalls_Mall\">Ingalls Mall</a>. The main stage is set up on the front steps of the <a href=\"https://localwiki.org/ann-arbor/Rackham_Graduate_School\">Rackham Graduate School</a>, while other facilities such as public toilets, the \"KidZone\" play area and food and beverage stalls are placed more or less on the periphery of the mall's central grassy area.<br><br>During the three and one-half weeks that <strong>TOP</strong> runs, there can be as many as fifty bands performing outside on Ingalls Mall. Performers have included popular rock bands, emerging local artists and touring international acts. Entertainment in recent years has also included specialty acts like an avant-garde aerial acrobatic troupe as must-see draws, as well as the \"Rock the Mall\" teen music competition. In addition, as many as sixteen movies, usually a mix of recent and classic popular hits, are projected on the stage after nightfall Sunday through Thursday nights.</div>",
+      "featured_image": "",
+      "start_date": "2020-06-01",
+      "start_time": null,
+      "end_date": "2020-07-05",
+      "end_time": null,
+      "location_name": "West Ingalls Mall",
+      "location_address": null,
+      "url": "http://a2sf.org",
+      "age_restriction": "21+ for beer garden",
+      "presented_by_wcbn": true
+    }
+  },
+  {
+    "model": "wcbn_cms.event",
+    "fields": {
+      "title": "Top of the Park",
+      "summary": "<div>Top of the Park (TOP) is an annual admission free outdoor music and movie series produced by the <a href=\"https://localwiki.org/ann-arbor/Ann_Arbor_Summer_Festival\">Ann Arbor Summer Festival</a> and held on the campus of the University of Michigan in downtown Ann Arbor. Top of the Park, the festival's outdoor series, began in 1983 as a way to maintain local business activity in the traditionally slow period between the end of the University semester and <a href=\"https://localwiki.org/ann-arbor/Art_Fair\">Art Fair season</a>. The festival runs the last two weeks of June through the first week of July, attracting a diverse audience of 60,000 annually.<br><br>For its first 24 years, <strong>TOP</strong> was held on top of the parking structure between the <a href=\"https://localwiki.org/ann-arbor/Power_Center\">Power Center</a> and the <a href=\"https://localwiki.org/ann-arbor/Dental_School\">Dental School</a> (thus the name), but in 2007 it moved one block west to <a href=\"https://localwiki.org/ann-arbor/Ingalls_Mall\">Ingalls Mall</a>. The main stage is set up on the front steps of the <a href=\"https://localwiki.org/ann-arbor/Rackham_Graduate_School\">Rackham Graduate School</a>, while other facilities such as public toilets, the \"KidZone\" play area and food and beverage stalls are placed more or less on the periphery of the mall's central grassy area.<br><br>During the three and one-half weeks that <strong>TOP</strong> runs, there can be as many as fifty bands performing outside on Ingalls Mall. Performers have included popular rock bands, emerging local artists and touring international acts. Entertainment in recent years has also included specialty acts like an avant-garde aerial acrobatic troupe as must-see draws, as well as the \"Rock the Mall\" teen music competition. In addition, as many as sixteen movies, usually a mix of recent and classic popular hits, are projected on the stage after nightfall Sunday through Thursday nights.</div>",
+      "featured_image": "",
+      "start_date": "2020-06-01",
+      "start_time": null,
+      "end_date": "2020-07-05",
+      "end_time": null,
+      "location_name": "West Ingalls Mall",
+      "location_address": null,
+      "url": "http://a2sf.org",
+      "age_restriction": "21+ for beer garden",
+      "presented_by_wcbn": true
+    }
+  }
+]

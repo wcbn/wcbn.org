@@ -11,6 +11,7 @@ class ArticleListView(ListView):
 class EventsListView(ListView):
     template_name = "layouts/with_sidebar.html"
     model = Event
+    paginate_by = 20
     ordering = ['-start_date', '-start_time', '-end_date', '-end_time']
 
     def get_context_data(self, **kwargs):
