@@ -1,5 +1,5 @@
-#homepage > aside {
-  @apply max-w-xs w-full -mt-4 pl-4 pt-4;
+aside#sidebar {
+  @apply max-w-xs w-full -mt-4 pl-4 pt-4 flex flex-col;
   
   section {
     @apply mb-3;
