@@ -1,0 +1,7 @@
+.pagination {
+  @apply flex justify-center p-4;
+
+  span {
+    @apply mx-2;
+  }
+}
