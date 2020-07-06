@@ -3,73 +3,6 @@
 //   size: false,
 // }
 
-// const uploadAttachment = (attachment) => {
-//   // console.log(attachment)
-//   const file = attachment
-//   console.log(file)
-
-// const data = {}
-// data['file'] = file
-
-// console.log(data)
-
-// fetch("/upload_media", { method: "POST", body: JSON.stringify(data) })
-//   .then((r) => r.json())
-//   .then((x) => {
-//     console.log(x)
-//   })
-
-// Example POST method implementation:
-// async function postData(url, data) {
-//   // Default options are marked with *
-
-//   const response = await fetch(url, {
-//     method: "POST", // *GET, POST, PUT, DELETE, etc.
-//     mode: "cors", // no-cors, *cors, same-origin
-//     cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-//     credentials: "same-origin", // include, *same-origin, omit
-//     headers: {
-//       "Content-Type": "application/json",
-//       "X-CSRFToken": document.querySelector("[name=csrfmiddlewaretoken]").value,
-//       "enctype": "multipart/form-data"
-//     },
-//     redirect: "follow", // manual, *follow, error
-//     referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-//     body: JSON.stringify(data), // body data type must match "Content-Type" header
-//   })
-//   return response.json() // parses JSON response into native JavaScript objects
-// }
-
-// postData("/upload_media/", { file: file }).then((data) => {
-//   console.log(data) // JSON data parsed by `data.json()` call
-// })
-
-// let upload = new DirectUpload(file, '/rails/active_storage/direct_uploads')
-
-// upload.create((error, blob) => {
-//   if (error) {
-//     console.log('Error uploading file from Trix')
-//   } else {
-//     // Add an appropriately-named hidden input to the form with a
-//     //  value of blob.signed_id so that the blob ids will be
-//     //  transmitted in the normal upload flow
-//     const hiddenField = document.createElement('input')
-//     hiddenField.setAttribute('type', 'hidden')
-//     hiddenField.name = 'dj[images][]'
-//     hiddenField.setAttribute('value', blob.signed_id)
-//     document.querySelector('form').appendChild(hiddenField)
-
-//     return attachment.setAttributes({
-//       url:
-//         '/rails/active_storage/blobs/' +
-//         blob.signed_id +
-//         '/' +
-//         encodeURIComponent(blob.filename),
-//     })
-//   }
-// })
-// }
-
 function uploadAttachment(attachment) {
   uploadFile(attachment.file, setProgress, setAttributes)
 
@@ -94,7 +27,6 @@ function uploadFile(file, progressCallback, successCallback) {
   // xhr.setRequestHeader("Content-Type", "application/json",)
   xhr.setRequestHeader("enctype", "multipart/form-data")
 
-
   xhr.upload.addEventListener("progress", function (event) {
     var progress = (event.loaded / event.total) * 100
     progressCallback(progress)
@@ -104,7 +36,7 @@ function uploadFile(file, progressCallback, successCallback) {
     if (xhr.status == 200) {
       console.log(xhr.response)
       resp = JSON.parse(xhr.response)
-     
+
       if (resp.message === "OK") {
         media_url = resp.url
         var attributes = {
