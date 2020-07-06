@@ -17,7 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from django.contrib.flatpages.views import flatpage
 
 
 urlpatterns = [
@@ -26,9 +25,8 @@ urlpatterns = [
     path('', include('wcbn_auth.urls')),
     path('', include('wcbn_cms.urls')),
     path('', include('readback.urls')),
-    path('accounts/', include('django.contrib.auth.urls')),
-    path('about/', flatpage, {'url': '/about/'}, name='about'),
-    path('contact/', flatpage, {'url': '/contact/'}, name='contact')
+    path('', include('trix.urls')),
+    path('accounts/', include('django.contrib.auth.urls'))
 ]
 
 if settings.DEBUG:

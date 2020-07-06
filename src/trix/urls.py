@@ -1,7 +1,7 @@
-# from django.conf.urls import include, url
-# from .views import AttachmentView
+from django.conf.urls import url
+from .views import UploadMediaView
 
 
-# urlpatterns = [
-#     url(r'^attachment/$', AttachmentView.as_view()),
-# ]
+urlpatterns = [
+    url('upload_media/', UploadMediaView.as_view()),
+]

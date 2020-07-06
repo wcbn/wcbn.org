@@ -8,7 +8,7 @@ from .models import Article, Event, Concert
 
 
 @admin.register(Article)
-class PostAdmin(TrixAdmin, admin.ModelAdmin):
+class ArticleAdmin(TrixAdmin, admin.ModelAdmin):
     trix_fields = ('text',)
 
 
