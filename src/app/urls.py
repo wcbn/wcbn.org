@@ -25,6 +25,7 @@ urlpatterns = [
     path('', include('wcbn_auth.urls')),
     path('', include('wcbn_cms.urls')),
     path('', include('readback.urls')),
+    path('', include('trix.urls')),
     path('accounts/', include('django.contrib.auth.urls'))
 ]
 
