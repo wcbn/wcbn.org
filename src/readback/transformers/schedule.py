@@ -1,5 +1,5 @@
 from collections import deque
-
+from datetime import datetime
 
 def transform_schedule(resp):
     """
@@ -56,13 +56,8 @@ def get_timestamp(isoformat):
     Accepts an iso datetime e.g. "2018-01-15T06:00:00.000-05:00"
     Returns HH:MM string e.g. "06:00"
     """
-    return isoformat[11:16]
-    # d = datetime.datetime.fromisoformat(isoformat)
-    # h = d.hour
-    # m = d.minute
-    # x = isoformat.split("T")[1] # get timestamp
-    # x = re.sub(r'\.\d+', "", x) # get HH:MM
-    # return x
+    return str(datetime.fromisoformat(isoformat).time().replace(second=0,microsecond=0))
+
 
 
 def get_shows_at(shows, showtime):
