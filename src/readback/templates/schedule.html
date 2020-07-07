@@ -3,27 +3,27 @@
 
 {% block content %}
 
-<div id="schedule-table-wrapper" class="flex w-full">
-  <table class="table-fixed border-separate">
+<div id="schedule-table-wrapper">
+  <table>
     <thead>
       <tr>
         <th></th>
         {% for th in weekdays %}
-        <th class="p-1" style="width: 14.285%">{{th}}</th>
+        <th>{{th}}</th>
         {% endfor %}
       </tr>
     </thead>
     <tbody>
       {% for tr in schedule %}
       <tr>
-        <td class="align-top">
-          <p class="text-xs font-semibold -mt-2 whitespace-no-wrap text-right"> {{tr.0.beginning|format_showtime}}</p>
+        <td>
+          <p>{{tr.0.beginning|format_showtime}}</p>
         </td>
         {% for td in tr %}
-          <td class="border p-1 align-top hover:bg-blue-200" rowspan="{{td.rowspan}}">
-            <p class="text-sm">{{td.name}}</p>
-            <p class="text-xs italic text-blue-500">{{td.with}}</p>
-          </td>
+        <td rowspan="{{td.rowspan}}">
+          <h1>{{td.name}}</h1>
+          <h2>{{td.with}}</h2>
+        </td>
         {% endfor %}
       </tr>
       {% endfor %}
@@ -31,9 +31,9 @@
   </table>
 </div>
 
-<div class="flex flex-row-reverse mt-2">
-  <p class="text-sm text-right">View past schedules, DJ bios, and more<br>
-  in our database, <a class="generic-link" href="{{READBACK_URL}}/semesters">Readback →</a>
+<div id="schedule-info">
+  <p>View past schedules, DJ bios, and more<br>
+  in the WCBN database, <a class="generic-link" href="{{READBACK_URL}}/semesters">Readback →</a>
   </p>
 </div>
 

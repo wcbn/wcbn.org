@@ -1,0 +1,42 @@
+#schedule-table-wrapper {
+  @apply flex w-full;
+
+  table {
+    @apply table-fixed border-separate;
+
+    th:not(:first-child) {
+      @apply p-1;
+      width: 14.285%;
+    }
+
+    td:first-child {
+      @apply align-top;
+      p {
+        @apply text-xs font-semibold -mt-2 whitespace-no-wrap text-right;
+      }
+    }
+
+    td:not(:first-child) {
+      @apply border p-1 align-top;
+
+      &:hover {
+        @apply bg-blue-200;
+      }
+
+      h1 {
+        @apply text-sm;
+      }
+
+      h2 {
+        @apply text-xs italic text-blue-500;
+      }
+    }
+  }
+}
+
+#schedule-info {
+  @apply flex flex-row-reverse mt-2;
+  p {
+    @apply text-sm text-right;
+  }
+}
