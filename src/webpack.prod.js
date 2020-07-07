@@ -1,13 +1,15 @@
-const merge = require("webpack-merge");
-const TerserJSPlugin = require("terser-webpack-plugin");
-const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const common = require("./webpack.common.js");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
+const merge = require('webpack-merge')
+const glob = require('glob')
+const TerserJSPlugin = require('terser-webpack-plugin')
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const common = require('./webpack.common.js')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries')
+const PurgecssPlugin = require('purgecss-webpack-plugin')
 
 module.exports = merge(common, {
-  mode: "production",
+  mode: 'production',
   // devtool: "source-map",
   optimization: {
     minimize: true,
@@ -22,7 +24,7 @@ module.exports = merge(common, {
       }),
       new OptimizeCSSAssetsPlugin({
         cssProcessorPluginOptions: {
-          preset: ["default", { discardComments: { removeAll: true } }],
+          preset: ['default', { discardComments: { removeAll: true } }],
         },
       }),
     ],
@@ -31,6 +33,10 @@ module.exports = merge(common, {
     new CleanWebpackPlugin(),
     new FixStyleOnlyEntriesPlugin(),
     new MiniCSSExtractPlugin(),
+    new PurgecssPlugin({
+      paths: glob.sync(`./**/*`, { nodir: true }),
+      whitelistPatterns: [/[\w-/:]+(?<!:)/g],
+    }),
   ],
   module: {
     rules: [
@@ -39,19 +45,19 @@ module.exports = merge(common, {
         use: [
           MiniCSSExtractPlugin.loader,
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               importLoaders: 1,
             },
           },
           {
-            loader: "postcss-loader",
+            loader: 'postcss-loader',
             options: {
-              ident: "postcss",
+              ident: 'postcss',
               plugins: [
-                require("tailwindcss"),
-                require("postcss-nested"),
-                require("autoprefixer"),
+                require('tailwindcss'),
+                require('postcss-nested'),
+                require('autoprefixer'),
               ],
             },
           },
@@ -59,4 +65,4 @@ module.exports = merge(common, {
       },
     ],
   },
-});
+})
