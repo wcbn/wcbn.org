@@ -1,9 +1,9 @@
 import requests
 from datetime import datetime, timedelta
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from .transformers import transform_schedule
 from django.conf import settings
-
+from django.utils import timezone
 
 def schedule(request):
     url = f'{settings.READBACK_URL}/semesters.json'
@@ -18,19 +18,25 @@ def schedule(request):
 
 
 def playlist(request):
-    now = datetime.now().isoformat()
-    one_day_ago = (datetime.now() - timedelta(days=1)).isoformat()
+    # TODO verify all timezones work
+    now = timezone.now().isoformat()
+    x = 1
+    x_days_ago = (timezone.now() - timedelta(days=x)).isoformat()
     
     url = f'{settings.READBACK_URL}/playlist/archive.json'
     params = {
          "til": now,
-        "from": one_day_ago
+        "from": x_days_ago
     }
-    resp = requests.get(url, params=params)
+    resp = requests.get(url, params=params).json()
 
     ctx = {
-        'items': resp.json()['items'],
-        'playlist_limit': one_day_ago
+        'items': resp['items'],
+        'playlist_limit': x_days_ago
     }
 
     return render(request, 'playlist.html', context=ctx)
+
+
+def dj(request, dj_id):
+    return redirect(settings.READBACK_URL + request.path)

@@ -1,0 +1,77 @@
+#playlist-wrapper {
+  table {
+    @apply table-auto w-full;
+
+    thead {
+      border-bottom: 1px solid black;
+      @apply mb-4;
+    }
+
+    tbody:before {
+      content: '-';
+      display: block;
+      line-height: 1em;
+      color: transparent;
+    }
+
+    th {
+      @apply text-left font-semibold;
+
+      &:first-child {
+        @apply w-0;
+      }
+    }
+
+    tr {
+      @apply h-8;
+    }
+
+    td {
+      @apply pr-4 text-sm;
+    }
+  }
+
+  .showinfo {
+    display: grid;
+    grid-template-columns: repeat(2, [col] auto);
+    grid-template-rows: repeat(2, [row] auto);
+  }
+
+  .showinfo {
+    h2 {
+      @apply font-bold;
+      grid-column: col 1;
+      grid-row: row 1;
+    }
+
+    .with {
+      @apply pl-4 text-sm italic;
+      grid-column: col 1;
+      grid-row: row 2;
+
+      a {
+        @apply text-blue-500;
+      }
+    }
+
+    .time {
+      @apply text-right text-sm hidden;
+      grid-column: col 2;
+      grid-row: row 1;
+    }
+  }
+
+  .width1 {
+    @apply whitespace-no-wrap;
+  }
+
+  .setbreak {
+    @apply text-right;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+
+    span {
+      @apply italic bg-white py-0 px-2 tracking-wider;
+    }
+  }
+}
