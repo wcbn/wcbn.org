@@ -8,6 +8,7 @@
 @import "./messages.css";
 @import "./pagination.css";
 @import "./player.css";
+@import "./playlist.css";
 @import "./footer.css";
 @import "./schedule.css";
 @import "./sidebar.css";
@@ -17,7 +18,7 @@ html {
 }
 
 body {
-  @apply h-full bg-gray-100 flex flex-col;
+  @apply h-full flex flex-col;
 }
 
 .heading {
@@ -42,15 +43,6 @@ body {
   }
 }
 
-.flex-reverse-wrapper {
-  overflow: auto;
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-.bold {
-  @apply font-bold;
-}
 /* purgecss end ignore */
 
 @tailwind utilities;

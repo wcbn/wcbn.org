@@ -1,18 +1,36 @@
 {% extends "layouts/application.html" %}
 
 {% block content %}
+<div id="playlist-wrapper">
+  <table>
+  <thead>
+    <tr>
+    <th>Time</th>
+    <th>Artist</th>
+    <th>Name</th>
+    <th>Album</th>
+    <th>Label</th>
+    <th>Year</th>
+    </tr>
+  </thead>
 
-<table>
-{% for item in items %}
-<tr>
-{{item.html|safe}}
-</tr>
-{% endfor %}
-</table>
+  {% for item in items %}
+  <tr>
+  {{item.html|safe}}
+  </tr>
+  {% endfor %}
+  </table>
+</div>
+
+<div id="readback-info">
+  <p>View full playlist history, show info, and more<br>
+  in the WCBN database, <a class="generic-link" href="{{READBACK_URL}}/playlist">Readback →</a>
+  </p>
+</div>
 
 {{ playlist_limit|json_script:"playlist-limit" }}
 
-<script>
+{% comment %} <script>
 function oneDayPriorTo(date) {
   return new Date(date.getTime() - 24 * 60 * 60 * 1000)
 }
@@ -40,6 +58,6 @@ $(window).scroll(function () {
   }
 });
 
-</script>
+</script> {% endcomment %}
 
 {% endblock %}

@@ -34,7 +34,7 @@
   }
 }
 
-#schedule-info {
+#readback-info {
   @apply flex flex-row-reverse mt-2;
   p {
     @apply text-sm text-right;
