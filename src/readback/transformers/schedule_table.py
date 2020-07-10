@@ -1,7 +1,7 @@
 from collections import deque
 from datetime import datetime
 
-def transform_schedule(resp):
+def transform_schedule_table(resp):
     """
     Accepts: response from /semesters.json
     Produces:

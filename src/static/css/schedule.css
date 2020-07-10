@@ -1,5 +1,9 @@
 #schedule-table-wrapper {
-  @apply flex w-full;
+  @apply hidden;
+
+  @screen md {
+    @apply flex w-full;
+  }
 
   table {
     @apply table-fixed border-separate;
@@ -38,6 +42,46 @@
         }
       }
     }
+  }
+}
+
+#schedule-accordion-wrapper {
+  @screen md {
+    @apply hidden;
+  }
+
+  button {
+    /* height: 3rem; */
+    @apply bg-black text-white font-semibold mb-2 p-4 flex justify-between items-center w-full;
+    &:hover {
+      @apply bg-blue-500;
+    }
+  }
+
+  .panel {
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+
+    @apply text-sm py-0 px-4 overflow-hidden;
+
+    td:first-child {
+      @apply pr-4;
+    }
+
+    tr:last-child {
+      td {
+        @apply pb-4;
+      }
+    }
+  }
+
+  .accordion:after {
+    content: '+';
+    @apply text-white text-lg;
+  }
+
+  .active:after {
+    content: '-';
   }
 }
 
