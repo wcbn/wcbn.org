@@ -1,9 +1,10 @@
 import requests
 from datetime import datetime, timedelta
 from django.shortcuts import redirect, render
-from .transformers import transform_schedule
+from .transformers import transform_schedule_table, transform_schedule_accordion
 from django.conf import settings
 from django.utils import timezone
+
 
 def schedule(request):
     url = f'{settings.READBACK_URL}/semesters.json'
@@ -12,7 +13,8 @@ def schedule(request):
 
     ctx = {}
     ctx['weekdays'] = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-    ctx['schedule'] = transform_schedule(resp.json())
+    ctx['schedule_accordion'] = transform_schedule_accordion(resp.json(), ctx['weekdays'])
+    ctx['schedule_table'] = transform_schedule_table(resp.json())
     ctx['title'] = "Schedule"
     return render(request, 'schedule.html', context=ctx)
 

@@ -52,18 +52,18 @@ class UserCreateView(CreateView):
         if form.is_valid():
             form.save()
 
-            first_name = form.cleaned_data['first_name']
             email = form.cleaned_data['email']
             password = form.cleaned_data['password1']
             new_user = authenticate(email=email, password=password)
             login(request, new_user)
 
-            msg = EmailMessage(
-                subject='Welcome to WCBN',
-                body=f'Hi {first_name},\nThanks for signing up!',
-                to=[email]
-            )
-            msg.send()
+            # first_name = form.cleaned_data['first_name']
+            # msg = EmailMessage(
+            #     subject='Welcome to WCBN',
+            #     body=f'Hi {first_name},\nThanks for signing up!',
+            #     to=[email]
+            # )
+            # msg.send()
             return redirect('/') #TODO
 
         return super().post(request)

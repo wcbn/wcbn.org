@@ -3,6 +3,19 @@
 
 {% block content %}
 
+<div id="schedule-accordion-wrapper">
+  {% for weekday, shows in schedule_accordion.items %}
+  <button class="accordion">{{weekday}}</button>
+  <div class="panel">
+    <table>
+    {% for show in shows %}
+      <tr><td>{{show.beginning|format_showtime}}</td><td>{{show.name}}</td></tr>  
+    {% endfor %}
+    </table>
+  </div>
+  {% endfor %}
+</div>
+
 <div id="schedule-table-wrapper">
   <table>
     <thead>
@@ -14,7 +27,7 @@
       </tr>
     </thead>
     <tbody>
-      {% for tr in schedule %}
+      {% for tr in schedule_table %}
       <tr>
         <td>
           <p>{{tr.0.beginning|format_showtime}}</p>
@@ -22,7 +35,11 @@
         {% for td in tr %}
         <td rowspan="{{td.rowspan}}">
           <h1>{{td.name}}</h1>
+          {% if td.djs|length == 1 %}
+          <h2><a href="{{td.djs.0.url}}">{{td.with}}</a></h2>
+          {% else %}
           <h2>{{td.with}}</h2>
+          {% endif %}
         </td>
         {% endfor %}
       </tr>
@@ -36,5 +53,24 @@
   in the WCBN database, <a class="generic-link" href="{{READBACK_URL}}/semesters">Readback →</a>
   </p>
 </div>
+
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 {% endblock %}
