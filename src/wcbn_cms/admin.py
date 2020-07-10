@@ -4,7 +4,7 @@ from django.contrib.flatpages.admin import FlatPageAdmin
 from django.db import models
 from django.forms import widgets
 from trix.admin import TrixAdmin
-from .models import Article, Event, Concert
+from .models import Article, Event, Concert, ExecMember, BoardMember, Department, DepartmentMembership
 
 
 @admin.register(Article)
@@ -16,7 +16,7 @@ class ArticleAdmin(TrixAdmin, admin.ModelAdmin):
 class EventAdmin(TrixAdmin, admin.ModelAdmin):
     trix_fields = ('summary',)
     formfield_overrides = {
-        models.TimeField: {'widget': widgets.TimeInput(attrs ={'type': 'time'}) }
+        models.TimeField: {'widget': widgets.TimeInput(attrs={'type': 'time'})}
     }
 
 
@@ -24,7 +24,7 @@ class EventAdmin(TrixAdmin, admin.ModelAdmin):
 class ConcertAdmin(TrixAdmin, admin.ModelAdmin):
     trix_fields = ('summary',)
     formfield_overrides = {
-        models.TimeField: {'widget': widgets.TimeInput(attrs ={'type': 'time'}) }
+        models.TimeField: {'widget': widgets.TimeInput(attrs={'type': 'time'})}
     }
 
 
@@ -44,3 +44,20 @@ class FlatPageAdmin(TrixAdmin, FlatPageAdmin):
 # Re-register FlatPageAdmin
 admin.site.unregister(FlatPage)
 admin.site.register(FlatPage, FlatPageAdmin)
+
+admin.site.register(ExecMember)
+admin.site.register(BoardMember)
+
+
+class DeptMemberInline(admin.TabularInline):
+    model = DepartmentMembership
+    extra = 0
+
+
+class DepartmentAdmin(admin.ModelAdmin):
+    inlines = [
+        DeptMemberInline
+    ]
+
+
+admin.site.register(Department, DepartmentAdmin)
