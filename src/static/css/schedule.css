@@ -28,7 +28,14 @@
       }
 
       h2 {
-        @apply text-xs italic text-blue-500;
+        @apply text-xs italic;
+
+        a {
+          @apply text-blue-500;
+          &:hover {
+            @apply underline;
+          }
+        }
       }
     }
   }
