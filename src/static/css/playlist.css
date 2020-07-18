@@ -9,9 +9,7 @@
 
     tbody:before {
       content: '-';
-      display: block;
-      line-height: 1em;
-      color: transparent;
+      @apply block leading-3 text-transparent;
     }
 
     th {
@@ -27,17 +25,45 @@
     }
 
     td {
-      @apply pr-4 text-sm;
+      @apply pr-4 text-sm align-top;
+      max-width: 20rem;
+    }
+
+    /* hide album and label by default */
+    th,
+    td {
+      &:nth-child(4),
+      &:nth-child(5) {
+        @apply hidden;
+      }
+    }
+
+    /* show album */
+    @screen md {
+      th,
+      td {
+        &:nth-child(4) {
+          @apply table-cell;
+        }
+      }
+    }
+
+    /* show label */
+    @screen lg {
+      th,
+      td {
+        &:nth-child(5) {
+          @apply table-cell;
+        }
+      }
     }
   }
 
   .showinfo {
-    display: grid;
+    @apply grid mb-1;
     grid-template-columns: repeat(2, [col] auto);
     grid-template-rows: repeat(2, [row] auto);
-  }
 
-  .showinfo {
     h2 {
       @apply font-bold;
       grid-column: col 1;
@@ -51,11 +77,15 @@
 
       a {
         @apply text-blue-500;
+        &:hover {
+          @apply underline;
+        }
       }
     }
 
     .time {
-      @apply text-right text-sm hidden;
+      @apply hidden; /* if we are only fetching the past 24 hours, who cares about this */
+      @apply text-right text-sm;
       grid-column: col 2;
       grid-row: row 1;
     }
