@@ -24,11 +24,17 @@
       @apply border p-1 align-top;
 
       &:hover {
-        @apply bg-blue-200;
+        @apply bg-blue-100;
       }
 
       h1 {
         @apply text-sm;
+
+        a {
+          &:hover {
+            @apply underline;
+          }
+        }
       }
 
       h2 {

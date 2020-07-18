@@ -34,9 +34,9 @@
         </td>
         {% for td in tr %}
         <td rowspan="{{td.rowspan}}">
-          <h1>{{td.name}}</h1>
+          <h1><a href="{{READBACK_URL}}{{td.url}}">{{td.name}}</a></h1>
           {% if td.djs|length == 1 %}
-          <h2><a href="{{td.djs.0.url}}">{{td.with}}</a></h2>
+          <h2><a href="{{READBACK_URL}}{{td.djs.0.url}}">{{td.with}}</a></h2>
           {% else %}
           <h2>{{td.with}}</h2>
           {% endif %}

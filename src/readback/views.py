@@ -24,10 +24,10 @@ def playlist(request):
     now = timezone.now().isoformat()
     x = 1
     x_days_ago = (timezone.now() - timedelta(days=x)).isoformat()
-    
+
     url = f'{settings.READBACK_URL}/playlist/archive.json'
     params = {
-         "til": now,
+        "til": now,
         "from": x_days_ago
     }
     resp = requests.get(url, params=params).json()
