@@ -9,25 +9,6 @@ In order to run this web application, you’ll need to install Docker and Yarn. 
         brew install yarn
         ./scripts/setup.sh
 
-## Credentials
-
-Note: Secrets are stored on Heroku.
-
-Create a `.env` file in the project's root directory and add these local environment variables:
-
-        DB_NAME=wcbn
-        DB_USER=postgres
-        DB_HOST=db
-        DB_PORT=5432
-        DB_PASSWORD=wcbnadm1n
-        SECRET_KEY=insertrandomstringhere123
-        DJANGO_SETTINGS_MODULE=app.environments.development
-        POSTGRES_DB=wcbn
-        POSTGRES_USER=postgres
-        POSTGRES_PASSWORD=wcbnadm1n
-
-It's a bit redundant, but that's because DB\_ is Heorku's convention whereas POSTGRES\_ is the image's.
-
 ## Launch
 
         ./scripts/start.sh
