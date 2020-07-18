@@ -197,8 +197,8 @@ SOCIAL_ICONS = {
     "logo-twitter": "https://twitter.com/wcbn_fm",
     "logo-instagram": "https://instagram.com/wcbn_fm",
     # "logo-facebook": "#", #NOTE facebook sucks
-    "logo-youtube": "#",
-    "logo-soundcloud": "#",
+    # "logo-youtube": "#", #NOTE youtube sucks
+    "logo-soundcloud": "https://soundcloud.com/wcbn",
     "logo-reddit": "https://www.reddit.com/r/wcbn/",
     "logo-github": "https://github.com/wcbn"
 }
