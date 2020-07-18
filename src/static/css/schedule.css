@@ -10,7 +10,7 @@
 
     th:not(:first-child) {
       @apply p-1;
-      width: 14.285%;
+      width: 14.285%; /* 1/7 */
     }
 
     td:first-child {
@@ -51,10 +51,9 @@
   }
 
   button {
-    /* height: 3rem; */
-    @apply bg-black text-white font-semibold mb-2 p-4 flex justify-between items-center w-full;
+    @apply font-semibold p-4 py-3 flex justify-between items-center w-full border-t border-black;
     &:hover {
-      @apply bg-blue-500;
+      @apply bg-blue-100;
     }
   }
 
@@ -64,8 +63,11 @@
 
     @apply text-sm py-0 px-4 overflow-hidden;
 
-    td:first-child {
-      @apply pr-4;
+    td {
+      @apply pr-4 align-top;
+      &:first-child {
+        @apply whitespace-no-wrap;
+      }
     }
 
     tr:last-child {
@@ -77,7 +79,7 @@
 
   .accordion:after {
     content: '+';
-    @apply text-white text-lg;
+    @apply text-lg;
   }
 
   .active:after {
