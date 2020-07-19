@@ -34,9 +34,9 @@
         </td>
         {% for td in tr %}
         <td rowspan="{{td.rowspan}}">
-          <h1><a href="{{READBACK_URL}}{{td.url}}">{{td.name}}</a></h1>
+          <h1><a href="{{READBACK_URL}}{{td.url}}" target="_blank" rel="noopener noreferrer">{{td.name}}</a></h1>
           {% if td.djs|length == 1 %}
-          <h2><a href="{{READBACK_URL}}{{td.djs.0.url}}">{{td.with}}</a></h2>
+          <h2><a href="{{READBACK_URL}}{{td.djs.0.url}}" target="_blank" rel="noopener noreferrer">{{td.with}}</a></h2>
           {% else %}
           <h2>{{td.with}}</h2>
           {% endif %}
@@ -50,7 +50,7 @@
 
 <div id="readback-info">
   <p>View past schedules, DJ bios, and more<br>
-  in the WCBN database, <a class="generic-link" href="{{READBACK_URL}}/semesters">Readback →</a>
+  in the WCBN database, <a class="generic-link" href="{{READBACK_URL}}/semesters" target="_blank" rel="noopener noreferrer">Readback →</a>
   </p>
 </div>
 

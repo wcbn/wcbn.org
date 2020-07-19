@@ -29,7 +29,7 @@
     <div>
       <ul class="ml-2">
       {% for text, url in RESOURCE_LINKS.items %}
-        <li>- <a class="generic-link" href="{{url}}">{{text}}</a></li>
+        <li>- <a class="generic-link" href="{{url}}" target="_blank" rel="noopener noreferrer">{{text}}</a></li>
       {% endfor %}
       </ul>
       
@@ -37,12 +37,10 @@
   </section>
 
   <section id="wcbn-twitter-widget">
-    {% if 'prod' in ENV %}
     <div style="height: 500px">
-      <a class="twitter-timeline" data-height="500" data-chrome="transparent" data-dnt="true" href="https://twitter.com/WCBN_FM?ref_src=twsrc%5Etfw"></a>
+      <a class="twitter-timeline" data-height="500" data-chrome="transparent" data-dnt="true" href="https://twitter.com/WCBN_FM" target="_blank" rel="noopener noreferrer"></a>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div> 
-    {% endif %}
   </section>
 
 </aside>
