@@ -7,7 +7,7 @@
 
   <div id="social-media">
   {% for icon, url in SOCIAL_ICONS.items %}
-  <a href="{{url}}">
+  <a href="{{url}}" target="_blank" rel="noopener noreferrer">
   {% ionicon name=icon %}
   </a>
   {% endfor %}

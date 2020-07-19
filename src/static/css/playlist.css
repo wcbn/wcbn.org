@@ -1,43 +1,79 @@
 #playlist-wrapper {
   table {
-    @apply table-auto w-full;
+    @apply table-auto w-full border-separate -mt-4;
+    border-spacing: 0;
 
     thead {
-      border-bottom: 1px solid black;
-      @apply mb-4;
+      @apply mb-4 border-b border-black bg-white;
     }
 
     tbody:before {
       content: '-';
-      display: block;
-      line-height: 1em;
-      color: transparent;
+      @apply block leading-3 text-transparent;
     }
 
     th {
-      @apply text-left font-semibold;
+      @apply text-left font-semibold pt-4 border-b border-black sticky top-0 bg-white;
+      max-width: 20rem;
 
       &:first-child {
-        @apply w-0;
+        @apply w-1;
       }
     }
 
     tr {
-      @apply h-8;
+      @apply h-6;
     }
 
     td {
-      @apply pr-4 text-sm;
+      @apply text-sm align-top;
+      max-width: 20rem;
+
+      &:not(:last-child) {
+        @apply pr-4;
+      }
+    }
+
+    /* hide album and label by default */
+    th,
+    td {
+      &:nth-child(4),
+      &:nth-child(5) {
+        @apply hidden;
+      }
+    }
+
+    /* show album */
+    @screen md {
+      th,
+      td {
+        &:nth-child(4) {
+          @apply table-cell;
+        }
+      }
+    }
+
+    /* show label */
+    @screen lg {
+      th,
+      td {
+        &:nth-child(5) {
+          @apply table-cell;
+        }
+      }
     }
   }
 
-  .showinfo {
-    display: grid;
-    grid-template-columns: repeat(2, [col] auto);
-    grid-template-rows: repeat(2, [row] auto);
+  /* setbreak wrapper */
+  td[colspan='6'] {
+    @apply align-middle;
   }
 
   .showinfo {
+    @apply grid mb-1;
+    grid-template-columns: repeat(2, [col] auto);
+    grid-template-rows: repeat(2, [row] auto);
+
     h2 {
       @apply font-bold;
       grid-column: col 1;
@@ -51,11 +87,15 @@
 
       a {
         @apply text-blue-500;
+        &:hover {
+          @apply underline;
+        }
       }
     }
 
     .time {
-      @apply text-right text-sm hidden;
+      @apply hidden; /* if we are only displaying the past 24 hours, no one needs the date */
+      @apply text-right text-sm;
       grid-column: col 2;
       grid-row: row 1;
     }
@@ -66,8 +106,7 @@
   }
 
   .setbreak {
-    @apply text-right;
-    border-bottom: 1px solid #000;
+    @apply text-right border-b border-black;
     line-height: 0.1em;
 
     span {
