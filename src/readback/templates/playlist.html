@@ -3,22 +3,23 @@
 {% block content %}
 <div id="playlist-wrapper">
   <table>
-  <thead>
-    <tr>
-    <th>Time</th>
-    <th>Artist</th>
-    <th>Name</th>
-    <th>Album</th>
-    <th>Label</th>
-    <th>Year</th>
-    </tr>
-  </thead>
-
-  {% for item in items %}
-  <tr>
-  {{item.html|safe}}
-  </tr>
-  {% endfor %}
+    <thead>
+      <tr>
+      <th>Time</th>
+      <th>Artist</th>
+      <th>Name</th>
+      <th>Album</th>
+      <th>Label</th>
+      <th>Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in items %}
+      <tr>
+      {{item.html|safe}}
+      </tr>
+      {% endfor %}
+    </tbody>
   </table>
 </div>
 
@@ -27,5 +28,11 @@
   in the WCBN database, <a class="generic-link" href="{{READBACK_URL}}/playlist" target="_blank" rel="noopener noreferrer">Readback →</a>
   </p>
 </div>
+
+<script>
+Array.from(document.querySelectorAll("tbody > tr"))
+  .filter((tr) => tr.children.length === 6)
+  .forEach((tr) => tr.classList.add("hover:bg-blue-100"));
+</script>
 
 {% endblock %}
