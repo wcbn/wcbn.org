@@ -10,7 +10,7 @@ def get_on_air():
 
 
 class IndexView(ListView):
-    template_name = 'homepage/homepage.html'
+    template_name = 'layouts/main_with_aside.html'
     model = Article
     ordering = ['-published_at']
 
@@ -20,4 +20,6 @@ class IndexView(ListView):
         context['STUDIO_LINE'] = settings.STUDIO_LINE
         context['RESOURCE_LINKS'] = settings.RESOURCE_LINKS
         context['on_air'] = get_on_air()['on_air'] if 'prod' in settings.DJANGO_SETTINGS_MODULE else {}
+        context['main'] = "articles/list.html"
+        context['aside'] = "homepage/aside.html"
         return context

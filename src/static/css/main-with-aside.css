@@ -1,0 +1,31 @@
+#main-with-aside {
+  @apply flex justify-between;
+
+  main {
+    @apply w-full pr-8;
+  }
+
+  aside {
+    @apply hidden;
+  }
+
+  @screen lg {
+    aside {
+      @apply max-w-xs w-full -mt-4 pl-4 pt-4 flex flex-col;
+
+      section {
+        @apply mb-3;
+
+        h1 {
+          @apply text-2xl font-bold;
+        }
+      }
+
+      #make-request {
+        svg {
+          @apply h-8 w-8;
+        }
+      }
+    }
+  }
+}
