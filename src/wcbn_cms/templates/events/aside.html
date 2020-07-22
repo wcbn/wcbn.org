@@ -1,8 +1,13 @@
 {% load ionicon %}
 
-{% if campus_events|length > 0%}
 <section id="happening_at_michigan">
   <h1>Happening on campus</h1>
+
+  {% if campus_events|length == 0 %}
+
+  <p>No events at this time :(</p>
+
+  {% else %}
 
   <table>
     {% for e in campus_events %}
@@ -23,5 +28,7 @@
     {% endfor %}
   </table>
 
+  {% endif %}
+
 </section>
-{% endif %}
+

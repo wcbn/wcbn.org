@@ -2,6 +2,10 @@
   max-height: 100vh;
   @apply overflow-scroll;
 
+  > p {
+    @apply text-center text-sm mt-4;
+  }
+
   h1 {
     @apply ml-4 mt-3;
   }
