@@ -4,8 +4,10 @@ from django.shortcuts import redirect, render
 from .transformers import transform_schedule_table, transform_schedule_accordion
 from django.conf import settings
 from django.utils import timezone
+from django.views.decorators.cache import cache_page
 
 
+@cache_page(2* 60 * 60) # 2 hours
 def schedule(request):
     url = f'{settings.READBACK_URL}/semesters.json'
     headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
