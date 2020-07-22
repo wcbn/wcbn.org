@@ -6,22 +6,25 @@
     @apply text-center text-sm mt-4;
   }
 
-  h1 {
-    @apply ml-4 mt-3;
-  }
-
   tr {
     @apply mb-2;
   }
 
-  td {
+  thead {
+    @apply text-center;
+    th > p {
+      @apply mt-6;
+    }
+  }
+
+  td, th {
     @apply align-top pt-4;
   }
 
   td:first-child div {
     @apply text-center p-1 border border-black rounded ml-2;
     min-width: 2.5rem;
-    
+
     /* month*/
     p:first-child {
       @apply text-sm font-bold;

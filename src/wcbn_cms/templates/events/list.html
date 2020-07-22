@@ -17,8 +17,11 @@
         <p>At: {{o.location_name}}</p>
       {% endif %}
     {% endwith %}
-    <div>
-      <div class="event-body">{{o.summary|safe}}</div>
+    <div class="event-body">
+      {% if o.featured_image %}
+      <img src="{{o.featured_image.url}}" />
+      {% endif %}
+      <div>{{o.summary|safe}}</div>
     </div>
   </div>
   {% endfor %}
