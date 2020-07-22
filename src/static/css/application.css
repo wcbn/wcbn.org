@@ -4,14 +4,15 @@
 @import "./article.css";
 @import "./event.css";
 @import "./forms.css";
+@import "./happening-at-michigan.css";
 @import "./header.css";
+@import "./main-with-aside.css";
 @import "./messages.css";
 @import "./pagination.css";
 @import "./player.css";
 @import "./playlist.css";
 @import "./footer.css";
 @import "./schedule.css";
-@import "./sidebar.css";
 
 html {
   @apply h-full;

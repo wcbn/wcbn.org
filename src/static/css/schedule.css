@@ -16,7 +16,7 @@
     td:first-child {
       @apply align-top;
       p {
-        @apply text-xs font-semibold -mt-2 whitespace-no-wrap text-right;
+        @apply text-xs font-semibold -mt-3 whitespace-no-wrap text-right;
       }
     }
 

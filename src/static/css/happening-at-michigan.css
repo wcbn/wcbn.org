@@ -1,0 +1,51 @@
+#happening_at_michigan {
+  max-height: 100vh;
+  @apply overflow-scroll;
+
+  > p {
+    @apply text-center text-sm mt-4;
+  }
+
+  h1 {
+    @apply ml-4 mt-3;
+  }
+
+  tr {
+    @apply mb-2;
+  }
+
+  td {
+    @apply align-top pt-4;
+  }
+
+  td:first-child div {
+    @apply text-center p-1 border border-black rounded ml-2;
+    min-width: 2.5rem;
+    
+    /* month*/
+    p:first-child {
+      @apply text-sm font-bold;
+    }
+    /* day */
+    p:last-child {
+      @apply text-xs font-bold;
+    }
+  }
+
+  td:last-child {
+    @apply font-semibold pl-2 leading-tight;
+
+    a {
+      &:hover {
+        @apply text-blue-500 underline;
+      }
+      p {
+        @apply text-sm leading-tight;
+      }
+    }
+
+    > p {
+      @apply text-xs italic mt-1;
+    }
+  }
+}
