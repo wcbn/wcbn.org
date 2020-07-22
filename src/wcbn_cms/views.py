@@ -2,12 +2,7 @@ import requests
 from django.shortcuts import render
 from django.views.generic import ListView
 from .models import Article, Event, Concert
-from .services.happening_at_umich import transform_concerts
-
-
-def get_happening_at_michigan(url):
-    resp = requests.get(url)
-    return resp.json()
+from .services.happening_at_umich import get_events as get_umich_events
 
 
 class ArticleListView(ListView):
@@ -22,12 +17,12 @@ class EventsListView(ListView):
     ordering = ['-start_date', '-start_time', '-end_date', '-end_time']
 
     def get_context_data(self, **kwargs):
-        umich_events = get_happening_at_michigan("https://events.umich.edu/list/json?filter=show:new")
+        umich_events = get_umich_events()
 
         ctx = super().get_context_data(**kwargs)
         ctx['main'] = "events/list.html"
         ctx['aside'] = "events/aside.html"
-        ctx['campus_events'] = transform_concerts(umich_events)
+        ctx['campus_events'] = umich_events
         ctx['title'] = "Upcoming Events"
         return ctx
 
@@ -39,12 +34,11 @@ class ConcertListView(ListView):
     ordering = ['start_date', 'start_time', 'end_date', 'end_time']
 
     def get_context_data(self, **kwargs):
-        umich_concerts = get_happening_at_michigan("https://events.umich.edu/list/json?filter=tags:Music,Concert,show:new")
+        umich_concerts = get_umich_events(["Music", "Concert"])
 
         ctx = super().get_context_data(**kwargs)
         ctx['main'] = "events/list.html"
         ctx['aside'] = "events/aside.html"
-
-        ctx['campus_events'] = transform_concerts(umich_concerts)
+        ctx['campus_events'] = umich_concerts
         ctx['title'] = "Upcoming Concerts"
         return ctx

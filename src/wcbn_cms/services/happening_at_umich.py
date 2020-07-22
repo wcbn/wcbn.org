@@ -1,21 +1,36 @@
-from datetime import datetime
-import time
-from django.template.defaultfilters import time as time_filter
+"""Simple wrapper for the "Happening @ Michigan" events API. See docs: https://events.umich.edu/feeds"""
 
-def transform_concerts(json_resp):
+from datetime import datetime, timedelta
+import requests
+
+
+def get_events(tags=[]):
+    """
+    Primary entrypoint for this module
+    Input: tags?: string[]
+    Output: event[]
+    """
+    try:
+        url = build_url(tags)
+        resp = requests.get(url)
+        json_resp = resp.json()
+        return transform(json_resp)
+    except:
+        return []
+
+
+def build_url(tags=[]):
+    BASE_URL = "https://events.umich.edu"
+    today = datetime.strftime(datetime.now(), "%Y-%m-%d")
+    three_weeks_hence = datetime.strftime(datetime.now() + timedelta(weeks=3), "%Y-%m-%d")
+    tags_str = "tags:" + ','.join(tags) if len(tags) > 0 else ""
+    return f"{BASE_URL}/list/json?filter=show:new,{tags_str}&range={today}to{three_weeks_hence}"
+
+
+def transform(json_resp):
     LIMIT = 75
     result = []
     for key, event in json_resp.items():
-        """
-        Month
-        Day
-        Title
-        Location
-        Time
-        Description...
-        URL
-        """
-        # datetime_start = strptime(event['datetime_start'], '%Y%m%dT%H%M%S')
         date_start = datetime.strptime(event['date_start'], '%Y-%m-%d')
         time_start = datetime.strptime(event['time_start'], '%H:%M:%S')
 
@@ -31,5 +46,5 @@ def transform_concerts(json_resp):
 
         if len(result) >= LIMIT:
             return result
-    
+
     return result
