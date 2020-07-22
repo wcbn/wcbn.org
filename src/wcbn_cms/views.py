@@ -1,6 +1,7 @@
 import requests
 from django.shortcuts import render
 from django.views.generic import ListView
+from django.utils import timezone
 from .models import Article, Event, Concert
 from .services.happening_at_umich import get_events as get_umich_events
 
@@ -14,7 +15,8 @@ class EventsListView(ListView):
     template_name = "layouts/main_with_aside.html"
     model = Event
     paginate_by = 20
-    ordering = ['-start_date', '-start_time', '-end_date', '-end_time']
+    ordering = ['start_date', 'start_time', 'end_date', 'end_time']
+    queryset = Event.objects.filter(start_date__gte=timezone.now())
 
     def get_context_data(self, **kwargs):
         umich_events = get_umich_events()
@@ -32,6 +34,7 @@ class ConcertListView(ListView):
     model = Concert
     paginate_by = 20
     ordering = ['start_date', 'start_time', 'end_date', 'end_time']
+    queryset = Concert.objects.filter(start_date__gte=timezone.now())
 
     def get_context_data(self, **kwargs):
         umich_concerts = get_umich_events(["Music", "Concert"])

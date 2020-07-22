@@ -1,0 +1,46 @@
+#event-list {
+  h2 {
+    @apply font-semibold text-lg mt-2 text-blue-500;
+  }
+
+  h3 {
+    @apply font-semibold text-2xl mt-1;
+  }
+
+  hr {
+  }
+
+  .event-listing {
+    @apply mb-4;
+
+    p {
+      @apply italic text-sm;
+    }
+
+    a {
+      @apply text-blue-500;
+
+      &:hover {
+        @apply underline;
+      }
+    }
+  }
+
+  .event-body {
+    @apply flex flex-col items-start mt-2;
+
+    @screen md {
+      @apply flex-row;
+    }
+
+    img {
+      @apply object-cover w-full mr-4 mb-2 flex-shrink-0 border border-black;
+      max-height: 18rem;
+
+      @screen md {
+        @apply object-contain;
+        max-width: 18rem;
+      }
+    }
+  }
+}

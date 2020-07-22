@@ -2,7 +2,7 @@
 @tailwind base;
 @tailwind components;
 @import "./article.css";
-@import "./event.css";
+@import "./events.css";
 @import "./forms.css";
 @import "./happening-at-michigan.css";
 @import "./header.css";
