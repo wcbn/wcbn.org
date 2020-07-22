@@ -1,5 +1,5 @@
 #main-with-aside {
-  @apply flex justify-between;
+  @apply flex justify-between h-full;
 
   main {
     @apply w-full pr-8;
@@ -11,7 +11,8 @@
 
   @screen lg {
     aside {
-      @apply max-w-xs w-full -mt-4 pl-4 pt-4 flex flex-col;
+      @apply max-w-xs w-full -mt-4 flex flex-col border-l border-black;
+      min-width: 20rem;
 
       section {
         @apply mb-3;
