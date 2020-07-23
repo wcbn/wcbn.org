@@ -1,0 +1,10 @@
+#app-store-badges {
+  @apply pl-4;
+
+  div {
+    @apply flex items-center justify-around;
+    a {
+      @apply flex-1;
+    }
+  }
+}
