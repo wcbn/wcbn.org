@@ -1,4 +1,5 @@
 {% load ionicon %}
+{% load static %}
 
 <section id="now-playing" class="pl-4 pt-3">
   <h1>Now Playing</h1>
@@ -40,4 +41,17 @@
     <a class="twitter-timeline" data-height="500" data-chrome="transparent" data-dnt="true" href="https://twitter.com/WCBN_FM" target="_blank" rel="noopener noreferrer"></a>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div> 
+</section>
+
+<section id="app-store-badges">
+  <h1>Download our mobile app</h1>
+  <div>
+    {% comment %} <a target="_blank" rel="noopener noreferrer" href='https://play.google.com/store/apps/details?id=org.wcbn&hl=en_US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+      <img alt='Get it on Google Play' src="{% static 'img/badges/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg' %}"/>
+    </a> {% endcomment %}
+    <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/wcbn-fm-ann-arbor/id600658964?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2013-02-15&kind=iossoftware&bubble=ios_apps) no-repeat;width:135px;height:40px;"></a>
+    <a target="_blank" rel="noopener noreferrer" href='https://play.google.com/store/apps/details?id=org.wcbn&hl=en_US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+      <img alt='Get it on Google Play' src="{% static 'img/badges/google-play-badge.png' %}"/>
+    </a>
+  </div>
 </section>
