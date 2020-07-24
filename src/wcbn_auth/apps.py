@@ -5,6 +5,7 @@ from django.db.models.signals import post_save
 class WCBNAuthConfig(AppConfig):
     name = 'wcbn_auth'
     label = 'wcbn_auth'
+    verbose_name = "WCBN Users"
 
     def ready(self):
         from wcbn_auth.signals import user_post_save

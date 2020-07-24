@@ -39,7 +39,13 @@ def playlist(request):
         'playlist_limit': x_days_ago
     }
 
+
+    url = f'{settings.READBACK_URL}/playlist.json'
+    resp = requests.get(url).json()
+    ctx['on_air'] = resp['on_air']
+
     return render(request, 'playlist.html', context=ctx)
+    
 
 
 def dj(request, dj_id):

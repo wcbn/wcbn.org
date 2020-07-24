@@ -29,7 +29,7 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
 INSTALLED_APPS = [
     'wcbn_auth.apps.WCBNAuthConfig',
     'wcbn_core',
-    'wcbn_cms',
+    'wcbn_cms.apps.WCBNCMSConfig',
     'readback',
     'ionicons',
     'trix',

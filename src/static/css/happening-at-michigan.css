@@ -2,23 +2,13 @@
   max-height: 100vh;
   @apply overflow-scroll;
 
-  > p {
-    @apply text-center text-sm mt-4;
+  tr:hover {
+    @apply bg-blue-100;
   }
 
-  tr {
-    @apply mb-2;
-  }
-
-  thead {
-    @apply text-center;
-    th > p {
-      @apply mt-6;
-    }
-  }
-
-  td, th {
-    @apply align-top pt-4;
+  td,
+  th {
+    @apply align-top py-2;
   }
 
   td:first-child div {
@@ -39,11 +29,10 @@
     @apply font-semibold pl-2 leading-tight;
 
     a {
+      @apply text-sm leading-tight;
+
       &:hover {
         @apply text-blue-500 underline;
-      }
-      p {
-        @apply text-sm leading-tight;
       }
     }
 
