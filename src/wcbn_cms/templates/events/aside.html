@@ -23,7 +23,7 @@
       </td>
       <td>
         <a href="{{e.url}}" target="_blank" rel="noopener noreferrer"><p>{{e.title}}</p></a>
-        <p>{{e.time|time}}{% if e.location %}, {{e.location|safe}}{% endif %}</p>
+        <p>{{e.time|time}}{% if e.location %} — {{e.location|safe}}{% endif %}</p>
       </td>
     </tr>
     {% endfor %}
