@@ -1,5 +1,6 @@
 from django.db.models import EmailField
 from django.contrib.auth.models import AbstractUser, BaseUserManager
+from wcbn_util.models import TimeStampedModel
 
 
 class UserManager(BaseUserManager):
@@ -36,9 +37,10 @@ class UserManager(BaseUserManager):
         return self._create_user(email, password, **extra_fields)
 
 
-class User(AbstractUser):
+class User(AbstractUser, TimeStampedModel):
     """NOTE many user fields are nullable to allow for flexibility in creating a user"""
     username = None
+    date_joined = None
     email = EmailField(unique=True)
 
     USERNAME_FIELD = 'email'
@@ -50,3 +52,6 @@ class User(AbstractUser):
         if not self.last_name:
             return self.email
         return f'{self.first_name} {self.last_name}'
+
+    class Meta:
+        db_table = "users"

@@ -1,20 +1,25 @@
 from django.db import models
 from django.utils import timezone
+from wcbn_util.models import TimeStampedModel
+from wcbn_util.fields import CharField
 
 
-class Article(models.Model):
-    title = models.CharField(max_length=140)
+class Article(TimeStampedModel):
+    title = CharField()
     text = models.TextField()
-    author = models.CharField(max_length=100)
+    author = CharField()
     featured_image = models.ImageField(upload_to='article_images', null=True, blank=True)
     published_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return self.title
 
+    class Meta:
+        db_table = "articles"
 
-class Event(models.Model):
-    title = models.CharField(max_length=140)
+
+class Event(TimeStampedModel):
+    title = CharField()
     summary = models.TextField()
     featured_image = models.ImageField(upload_to='event_images', null=True, blank=True)
 
@@ -23,19 +28,23 @@ class Event(models.Model):
     end_date = models.DateField(null=True, blank=True)
     end_time = models.TimeField(null=True, blank=True)
 
-    location_name = models.CharField(max_length=140, null=True, blank=True)
-    location_address = models.CharField(max_length=140, null=True, blank=True)
+    location_name = CharField(null=True, blank=True)
+    location_address = CharField(null=True, blank=True)
 
-    url = models.URLField(max_length=140, null=True, blank=True)
-    age_restriction = models.CharField(max_length=20, null=True, blank=True)
-    presented_by_wcbn = models.BooleanField(default=False)
+    url = models.URLField(null=True, blank=True)
+    age_restriction = CharField(null=True, blank=True)
+    is_presented_by_wcbn = models.BooleanField(default=False)
+    is_free = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title
 
+    class Meta:
+        db_table = "events"
 
-class Concert(models.Model):
-    title = models.CharField(max_length=140)
+
+class Concert(TimeStampedModel):
+    title = CharField()
     summary = models.TextField()
     featured_image = models.ImageField(upload_to='concert_images', null=True, blank=True)
 
@@ -46,12 +55,16 @@ class Concert(models.Model):
     end_date = models.DateField(null=True, blank=True)
     end_time = models.TimeField(null=True, blank=True)
 
-    location_name = models.CharField(max_length=140, null=True, blank=True)
-    location_address = models.CharField(max_length=140, null=True, blank=True)
+    location_name = CharField(null=True, blank=True)
+    location_address = CharField(null=True, blank=True)
 
-    url = models.URLField(max_length=140, null=True, blank=True)
-    age_restriction = models.CharField(max_length=20, null=True, blank=True)
-    presented_by_wcbn = models.BooleanField(default=False)
+    url = models.URLField(null=True, blank=True)
+    age_restriction = CharField(null=True, blank=True)
+    is_presented_by_wcbn = models.BooleanField(default=False)
+    is_free = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        db_table = "concerts"
