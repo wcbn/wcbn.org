@@ -1,6 +1,7 @@
 /* purgecss start ignore */
 @tailwind base;
 @tailwind components;
+@import "./about.css";
 @import "./article.css";
 @import "./events.css";
 @import "./forms.css";

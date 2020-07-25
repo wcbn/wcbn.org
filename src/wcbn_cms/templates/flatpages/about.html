@@ -1,0 +1,18 @@
+{% extends "layouts/application.html" %}
+
+{% load static %}
+
+{% block content%}
+<h1 class="heading">{{ flatpage.title }}</h1>
+<hr class="mb-2">
+
+<div id="about-content-wrapper">
+  <div>
+    <p>{{ flatpage.content }}</p>
+  </div>
+  <figure>
+    <img src="{% static 'img/coverage_map.png' %}" />
+    <figcaption>WCBN Coverage Map</figcaption>
+  </figure>
+</div>
+{% endblock %}

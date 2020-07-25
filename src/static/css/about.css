@@ -1,0 +1,33 @@
+#about-content-wrapper {
+  @apply flex flex-col;
+
+  a {
+    @apply text-blue-500;
+
+    &:hover {
+      @apply underline;
+    }
+  }
+
+  > div {
+    @apply flex-1 mr-8 mb-6;
+  }
+
+  > figure {
+    @apply flex-1;
+
+    figcaption {
+      @apply text-sm text-right text-gray-600 italic;
+    }
+  }
+}
+
+@screen md {
+  #about-content-wrapper {
+    @apply flex-row;
+
+    > figure {
+      max-width: 30rem;
+    }
+  }
+}
