@@ -40,6 +40,7 @@ class UserManager(BaseUserManager):
 class User(AbstractUser, TimeStampedModel):
     """NOTE many user fields are nullable to allow for flexibility in creating a user"""
     username = None
+    date_joined = None
     email = EmailField(unique=True)
 
     USERNAME_FIELD = 'email'
