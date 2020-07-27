@@ -7,5 +7,7 @@ def global_config(request):
         'ENV': settings.DJANGO_SETTINGS_MODULE,
         'READBACK_URL': settings.READBACK_URL,
         'SOCIAL_ICONS': settings.SOCIAL_ICONS,
-        'RESOURCE_LINKS': settings.RESOURCE_LINKS
+        'RESOURCE_LINKS': settings.RESOURCE_LINKS,
+        'NAV_TABS': settings.NAV_TABS,
+        'USER_NAV_TABS': settings.USER_NAV_TABS
     }

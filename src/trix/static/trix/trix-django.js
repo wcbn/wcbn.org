@@ -74,6 +74,7 @@ function createFormData(key, file) {
 // If Trix editor has prevent-uploads data attribute, disallow upload
 addEventListener("trix-attachment-add", (event) => {
   if (event.target.dataset.trixPreventUploads) {
+    window.alert('Image uploads are disabled for this content type')
     return event.preventDefault()
   }
   if (event.attachment.file) {
