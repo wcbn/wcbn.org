@@ -6,6 +6,14 @@ from django.utils.translation import gettext, gettext_lazy as _
 
 
 class UserAdmin(BaseUserAdmin):
+
+    def has_add_permission(self, request, obj=None):
+        """
+        Removes ability to create a user from the admin site. 
+        i.e. removes Add User button in favor of self-service sign-up
+        """
+        return False
+
     ordering = ('created_at',)
     list_display = ('email', 'first_name', 'last_name', 'is_active', 'created_at', 'last_login', 'is_staff')
     fieldsets = (
