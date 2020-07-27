@@ -7,7 +7,7 @@ nav {
 }
 
 #wcbn-logo img {
-  @apply h-10 mr-2;
+  @apply h-10;
 }
 
 nav #nav-options {

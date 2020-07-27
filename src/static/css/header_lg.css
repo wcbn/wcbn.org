@@ -1,6 +1,7 @@
 @screen lg {
-  nav {
-    @apply flex items-center justify-end flex-wrap m-auto px-4;
+  #wcbn-logo-wrapper {
+    @apply inline-block;
+    width: unset;
   }
 
   #wcbn-logo {
@@ -9,149 +10,69 @@
     }
   }
 
-  nav #nav-options {
-    @apply w-full block flex-grow;
-    clear: both;
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
-    overflow: hidden;
-  }
-
-  nav #nav-toggle-label {
-    cursor: pointer;
-    display: inline-block;
-    float: right;
-    padding: 14px 10px;
-    position: relative;
-    user-select: none;
-  }
-
-  nav #nav-toggle-icon {
-    @apply bg-black;
-    display: block;
-    height: 2px;
-    position: relative;
-    transition: background 0.2s ease-out;
-    width: 18px;
-
-    &:before,
-    &:after {
-      @apply bg-black;
-      content: '';
-      display: block;
-      height: 100%;
-      position: absolute;
-      transition: all 0.2s ease-out;
-      width: 100%;
-    }
-
-    &:before {
-      top: 5px;
-    }
-
-    &:after {
-      top: -5px;
-    }
-  }
-
-  nav #nav-toggle-input {
-    display: none;
-
-    &:checked ~ #nav-options {
-      @apply max-h-screen;
-    }
-
-    &:checked ~ #nav-toggle-label #nav-toggle-icon {
-      @apply bg-transparent;
-
-      &:before {
-        @apply transform -rotate-45;
-      }
-
-      &:after {
-        @apply transform rotate-45;
-      }
-
-      &:before,
-      &:after {
-        top: 0;
-      }
-    }
-  }
-
   .nav-links-wrapper {
     @apply h-20;
   }
 
+  nav #nav-options {
+    clear: none;
+    float: right;
+    max-height: none;
+    @apply flex items-center w-auto;
+  }
+  nav #nav-toggle-label {
+    display: none;
+  }
   nav a.nav-link {
-    @apply block text-black pt-1 font-semibold text-sm;
+    @apply inline-block py-2 px-5 relative z-0 text-base h-full border-none;
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 
-    &:hover {
-      @apply text-blue-500;
+    &:before {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 1px;
+      height: 0px;
+      background: black;
+      content: '';
+      opacity: 1;
+      transition: all 0.3s;
+    }
+
+    &:after:not {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 1px;
+      background: white;
+      content: '';
+      opacity: 1;
+      transition: all 0.3s;
+    }
+
+    &:hover:before {
+      height: 100%;
+    }
+
+    &:hover:after {
+      opacity: 0;
+      top: 100%;
     }
   }
 
-  @screen lg {
-    nav #nav-options {
-      clear: none;
-      float: right;
-      max-height: none;
-      @apply flex items-center w-auto;
+  nav a.nav-link.active {
+    border-left: 1px solid black;
+    @apply bg-blue-100;
+
+    &:before {
+      height: 0;
     }
-    nav #nav-toggle-label {
-      display: none;
-    }
-    nav a.nav-link {
-      @apply inline-block py-2 px-5 relative z-0 text-base h-full;
-      display: inline-flex;
-      justify-content: center;
-      align-content: center;
-      flex-direction: column;
-
-      &:before {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 1px;
-        height: 0px;
-        background: black;
-        content: '';
-        opacity: 1;
-        transition: all 0.3s;
-      }
-
-      &:after:not {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        height: 1px;
-        background: white;
-        content: '';
-        opacity: 1;
-        transition: all 0.3s;
-      }
-
-      &:hover:before {
-        height: 100%;
-      }
-
-      &:hover:after {
-        opacity: 0;
-        top: 100%;
-      }
-    }
-
-    nav a.nav-link.active {
-      border-left: 1px solid black;
-      @apply bg-blue-100;
-
-      &:before {
-        height: 0;
-      }
-      &:after {
-        height: 0;
-      }
+    &:after {
+      height: 0;
     }
   }
 }
