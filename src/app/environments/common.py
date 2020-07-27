@@ -223,6 +223,6 @@ NAV_TABS = {
 }
 
 USER_NAV_TABS = {
-    'Log in': 'wcbn_auth:login',
-    'Sign up': 'wcbn_auth:create_user'
+    # 'Log in': 'wcbn_auth:login',
+    # 'Sign up': 'wcbn_auth:create_user'
 }
