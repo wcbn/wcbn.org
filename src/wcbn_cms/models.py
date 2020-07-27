@@ -31,10 +31,10 @@ class Event(TimeStampedModel):
     location_name = CharField(null=True, blank=True)
     location_address = CharField(null=True, blank=True)
 
-    url = models.URLField(null=True, blank=True)
+    url = models.URLField("URL", null=True, blank=True)
     age_restriction = CharField(null=True, blank=True)
-    is_presented_by_wcbn = models.BooleanField(default=False)
-    is_free = models.BooleanField(default=False)
+    is_presented_by_wcbn = models.BooleanField("Presented by WCBN?", default=False)
+    is_free = models.BooleanField("Free?", default=False)
 
     def __str__(self):
         return self.title
@@ -58,10 +58,10 @@ class Concert(TimeStampedModel):
     location_name = CharField(null=True, blank=True)
     location_address = CharField(null=True, blank=True)
 
-    url = models.URLField(null=True, blank=True)
+    url = models.URLField("URL", null=True, blank=True)
     age_restriction = CharField(null=True, blank=True)
-    is_presented_by_wcbn = models.BooleanField(default=False)
-    is_free = models.BooleanField(default=False)
+    is_presented_by_wcbn = models.BooleanField("Presented by WCBN?", default=False)
+    is_free = models.BooleanField("Free?", default=False)
 
     def __str__(self):
         return self.title
