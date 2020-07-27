@@ -7,24 +7,30 @@ from trix.admin import TrixAdmin
 from .models import Article, Event, Concert
 
 
+class PreventTrixUploadsMixin():
+    class Media:
+        css = {'all': ('wcbn_cms/prevent-trix-uploads.css',)}
+        js = ("wcbn_cms/preventTrixUploads.js",)
+
+
 @admin.register(Article)
 class ArticleAdmin(TrixAdmin, admin.ModelAdmin):
     trix_fields = ('text',)
 
 
 @admin.register(Event)
-class EventAdmin(TrixAdmin, admin.ModelAdmin):
+class EventAdmin(TrixAdmin, PreventTrixUploadsMixin, admin.ModelAdmin):
     trix_fields = ('summary',)
     formfield_overrides = {
-        models.TimeField: {'widget': widgets.TimeInput(attrs ={'type': 'time'}) }
+        models.TimeField: {'widget': widgets.TimeInput(attrs={'type': 'time'})}
     }
 
 
 @admin.register(Concert)
-class ConcertAdmin(TrixAdmin, admin.ModelAdmin):
+class ConcertAdmin(TrixAdmin, PreventTrixUploadsMixin, admin.ModelAdmin):
     trix_fields = ('summary',)
     formfield_overrides = {
-        models.TimeField: {'widget': widgets.TimeInput(attrs ={'type': 'time'}) }
+        models.TimeField: {'widget': widgets.TimeInput(attrs={'type': 'time'})}
     }
 
 
