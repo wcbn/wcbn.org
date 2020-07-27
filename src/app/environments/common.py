@@ -27,13 +27,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
 
 INSTALLED_APPS = [
-    'wcbn_auth.apps.WCBNAuthConfig',
-    'wcbn_core',
-    'wcbn_cms.apps.WCBNCMSConfig',
-    'readback',
-    'ionicons',
-    'trix',
-    'captcha',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,6 +41,13 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'django_filters',
     'phonenumber_field',
+    'readback',
+    'ionicons',
+    'wcbn_auth.apps.WCBNAuthConfig',
+    'wcbn_cms.apps.WCBNCMSConfig',
+    'wcbn_core',
+    'captcha',
+    'trix',
 ]
 
 
