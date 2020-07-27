@@ -15,11 +15,13 @@ class IndexView(ListView):
     ordering = ['-published_at']
 
     def get_context_data(self, **kwargs):
-        context = super(IndexView, self).get_context_data(**kwargs)
-        context['title'] = 'Homepage'
-        context['STUDIO_LINE'] = settings.STUDIO_LINE
-        context['RESOURCE_LINKS'] = settings.RESOURCE_LINKS
-        context['on_air'] = get_on_air()['on_air'] if 'prod' in settings.DJANGO_SETTINGS_MODULE else {}
-        context['main'] = "articles/list.html"
-        context['aside'] = "homepage/aside.html"
-        return context
+        ctx = super(IndexView, self).get_context_data(**kwargs)
+        ctx['title'] = 'Homepage'
+        ctx['STUDIO_LINE'] = settings.STUDIO_LINE
+        ctx['RESOURCE_LINKS'] = settings.RESOURCE_LINKS
+        ctx['on_air'] = get_on_air()['on_air'] if 'prod' in settings.DJANGO_SETTINGS_MODULE else {}
+        ctx['main'] = "articles/list.html"
+        ctx['aside'] = "homepage/aside.html"
+        ctx['IOS_URL'] = settings.IOS_URL
+        ctx['ANDROID_URL'] = settings.ANDROID_URL
+        return ctx
