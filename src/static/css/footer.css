@@ -21,6 +21,10 @@ footer {
           @apply fill-current text-blue-500;
         }
       }
+
+      p {
+        @apply hidden;
+      }
     }
   }
 }
