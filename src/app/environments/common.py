@@ -213,3 +213,16 @@ RESOURCE_LINKS = {
     'Give to WCBN': "https://leadersandbest.umich.edu/find/#!/give/basket/fund/361991"
 }
 
+NAV_TABS = {
+    'About': 'wcbn_cms:about',
+    'Contact': 'wcbn_cms:contact',
+    'Events': 'wcbn_cms:events',
+    'Concerts': 'wcbn_cms:concerts',
+    'Schedule': 'readback:schedule',
+    'Playlist': 'readback:playlist',
+}
+
+USER_NAV_TABS = {
+    'Log in': 'wcbn_auth:login',
+    'Sign up': 'wcbn_auth:create_user'
+}

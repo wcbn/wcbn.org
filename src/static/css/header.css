@@ -1,30 +1,29 @@
 nav {
-  @apply flex items-center justify-end flex-wrap p-4 m-auto;
+  @apply flex items-center justify-end flex-wrap px-4 m-auto;
 }
 
-#wcbn-logo {
-  @apply mr-6;
+#wcbn-logo-wrapper {
+  @apply flex w-full py-4 justify-center;
+}
 
-  img {
-    @apply h-10 mr-2;
-  }
+#wcbn-logo img {
+  @apply h-10 mr-2;
 }
 
 nav #nav-options {
   @apply w-full block flex-grow;
   clear: both;
   max-height: 0;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.3s ease-out;
   overflow: hidden;
 }
 
 nav #nav-toggle-label {
   cursor: pointer;
-  display: inline-block;
-  float: right;
-  padding: 14px 10px;
-  position: relative;
+  padding: 14px 1rem;
   user-select: none;
+  position: absolute;
+  top: 1.5rem;
 }
 
 nav #nav-toggle-icon {
@@ -32,17 +31,17 @@ nav #nav-toggle-icon {
   display: block;
   height: 2px;
   position: relative;
-  transition: background 0.2s ease-out;
+  transition: background 0.3s ease-out;
   width: 18px;
 
   &:before,
   &:after {
     @apply bg-black;
-    content: "";
+    content: '';
     display: block;
     height: 100%;
     position: absolute;
-    transition: all 0.2s ease-out;
+    transition: all 0.3s ease-out;
     width: 100%;
   }
 
@@ -81,63 +80,9 @@ nav #nav-toggle-input {
 }
 
 nav a.nav-link {
-  @apply block text-black pt-1 font-semibold text-sm;
+  @apply block text-black py-2 px-4 font-semibold border-t border-black;
 
   &:hover {
-    @apply text-blue-500;
-  }
-}
-
-@screen lg {
-  
-
-  nav {
-    @apply pb-0;
-  }
-
-  nav #nav-options {
-    clear: none;
-    float: right;
-    max-height: none;
-    @apply flex items-center w-auto;
-  }
-  nav #nav-toggle-label {
-    display: none;
-  }
-  nav a.nav-link {
-    @apply inline-block py-2 px-4 relative z-0 text-base;
-
-    &:before {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      width: 1px;
-      height: 0px;
-      background: black;
-      content: "";
-      opacity: 1;
-      transition: all 0.3s;
-    }
-
-    &:after {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      width: 100%;
-      height: 1px;
-      background: black;
-      content: "";
-      opacity: 1;
-      transition: all 0.3s;
-    }
-
-    &:hover:before {
-      height: 100%;
-    }
-
-    &:hover:after {
-      opacity: 0;
-      top: 100%;
-    }
+    @apply text-blue-500 bg-blue-100;
   }
 }

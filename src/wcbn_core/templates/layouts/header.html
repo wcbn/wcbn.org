@@ -1,31 +1,36 @@
 {% load static %}
+{% with view_name=request.resolver_match.view_name %}
 <header>
-  
-  <nav class="container">
-   
-    {% comment %} <a id="wcbn-logo" href="{% url 'wcbn_core:homepage' %}">
-      <img src='{% static "img/logo.png" %}' alt="WCBN Logo" />
-    </a> {% endcomment %}
 
+  <nav class="container">
+
+    <div id="wcbn-logo-wrapper">
+      <a id="wcbn-logo" href="{% url 'wcbn_core:homepage' %}">
+        <img src='{% static "img/logo.png" %}' alt="WCBN Logo" />
+      </a>
+    </div>
+  
+    
     <input id="nav-toggle-input" type="checkbox" />
-    <label id="nav-toggle-label" for="nav-toggle-input"><span id="nav-toggle-icon"></span></label>    
+    <label id="nav-toggle-label" for="nav-toggle-input"><span id="nav-toggle-icon"></span></label>
 
     <div id="nav-options">
       
-      <div id="nav-links-wrapper">
-        <a class="nav-link" href="{% url 'wcbn_core:homepage' %}">WCBN</a><a class="nav-link" href="{% url 'wcbn_cms:about' %}">About</a><a class="nav-link" href="{% url 'wcbn_cms:contact' %}">Contact</a><a class="nav-link" href="{% url 'wcbn_cms:events' %}">Events</a><a class="nav-link" href="{% url 'wcbn_cms:concerts' %}">Concerts</a><a class="nav-link" href="{% url 'readback:schedule' %}">Schedule</a><a class="nav-link" href="{% url 'readback:playlist' %}">Playlist</a>
+      <div class="nav-links-wrapper">
+      {% for txt, href in NAV_TABS.items %}<a class="nav-link {% if view_name == href %}active{% endif %}" href="{% url href %}">{{txt}}</a>{% endfor %}
       </div>
 
       <div class="flex-grow"></div>
 
-      <div>
+      <div class="nav-links-wrapper">
         {% if user.is_authenticated %}
         <a class="nav-link" href="{% url 'logout' %}">Logout</a>
         {% else %}
-        <a class="nav-link" href="{% url 'wcbn_auth:login' %}">Log in</a><a class="nav-link" href="{% url 'wcbn_auth:create_user' %}">Sign up</a>
+        {% for txt, href in USER_NAV_TABS.items %}<a class="nav-link {% if view_name == href %}active{% endif %}" href="{% url href %}">{{txt}}</a>{% endfor %}
         {% endif %}
       </div>
 
     </div>
   </nav>
 </header>
+{% endwith %}
