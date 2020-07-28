@@ -21,10 +21,15 @@ def get_events(tags=[]):
 
 def build_url(tags=[]):
     BASE_URL = "https://events.umich.edu"
-    today = datetime.strftime(datetime.now(), "%Y-%m-%d")
-    three_weeks_hence = datetime.strftime(datetime.now() + timedelta(weeks=3), "%Y-%m-%d")
+
     tags_str = "tags:" + ','.join(tags) if len(tags) > 0 else ""
-    return f"{BASE_URL}/list/json?filter=show:new,{tags_str}&range={today}to{three_weeks_hence}"
+
+    today = datetime.strftime(datetime.now(), "%Y-%m-%d")
+    x = 6
+    x_weeks_hence = datetime.strftime(datetime.now() + timedelta(weeks=x), "%Y-%m-%d")
+    time_range_str = f"range={today}to{x_weeks_hence}"
+
+    return f"{BASE_URL}/list/json?filter=show:new,{tags_str}&{time_range_str}"
 
 
 def transform(json_resp):
