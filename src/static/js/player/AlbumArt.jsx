@@ -37,6 +37,7 @@ function AlbumArt({ song }) {
         src={imageSrc.replace(/100x100/, "1000x1000")}
         alt="Album Artwork"
         className="h-10 w-10"
+        data-action="zoom"
       />
     </Zoom>
   )

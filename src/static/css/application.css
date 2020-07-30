@@ -1,21 +1,21 @@
 /* purgecss start ignore */
 @tailwind base;
 @tailwind components;
-@import "./about.css";
-@import "./article.css";
-@import "./events.css";
-@import "./forms.css";
-@import "./happening-at-michigan.css";
-@import "./header.css";
-@import "./header_lg.css";
-@import "./homepage.css";
-@import "./main-with-aside.css";
-@import "./messages.css";
-@import "./pagination.css";
-@import "./player.css";
-@import "./playlist.css";
-@import "./footer.css";
-@import "./schedule.css";
+@import './about.css';
+@import './article.css';
+@import './events.css';
+@import './forms.css';
+@import './happening-at-michigan.css';
+@import './header.css';
+@import './header_lg.css';
+@import './homepage.css';
+@import './main-with-aside.css';
+@import './messages.css';
+@import './pagination.css';
+@import './player.css';
+@import './playlist.css';
+@import './footer.css';
+@import './schedule.css';
 
 html {
   @apply h-full;

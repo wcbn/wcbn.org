@@ -1,12 +1,12 @@
 <script>
-  import PlayPause from './PlayPause.svelte'
-  import InfoBar from './InfoBar.svelte'
+  import PlayPauseButton from './PlayPauseButton.svelte'
+  import OnAir from './OnAir/OnAir.svelte'
 
   const STREAM_URL = 'http://floyd.wcbn.org:8000/wcbn-hd.mp3'
-  let audio = document.createElement('audio')
+  const audio = document.createElement('audio')
   let isPlaying = false
 
-  const handleClick = function () {
+  const handlePlayPause = function () {
     if (isPlaying) {
       audio.src = ''
       audio.pause()
@@ -23,11 +23,11 @@
 
     isPlaying = !isPlaying
   }
-  
-  console.log('wef');
 </script>
 
-<dev>
-  <PlayPause {isPlaying} {handleClick} />
-  <InfoBar {isPlaying} />
-</dev>
+<div>
+  <div>
+    <PlayPauseButton {isPlaying} {handlePlayPause} />
+    <OnAir {isPlaying} />
+  </div>
+</div>
