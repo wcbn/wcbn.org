@@ -23,6 +23,8 @@
 
     isPlaying = !isPlaying
   }
+  
+  console.log('wef');
 </script>
 
 <dev>
