@@ -58,7 +58,7 @@
     //     // ignore
     //   })
 
-    song = song ? null : ickyThump
+    song = ickyThump // || null
   }, POLL_INTERVAL)
 </script>
 

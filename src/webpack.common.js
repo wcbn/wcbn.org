@@ -3,8 +3,7 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    index: "./static/js/index.jsx",
-    player: "./static/js/player.jsx",
+    index: "./static/js/index.js",
     styles: "./static/css/application.css",
     stream: "./static/svelte/index.js"
   },
@@ -16,7 +15,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?/,
+        test: /\.js/,
         exclude: /node_modules/,
         loader: "babel-loader",
       },
@@ -37,7 +36,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.mjs', '.js', '.jsx', '.svelte', ".css"],
+    extensions: ['.mjs', '.js', '.svelte', ".css"],
     mainFields: ['svelte', 'browser', 'module', 'main'],
     alias: {
 			svelte: path.resolve('node_modules', 'svelte')

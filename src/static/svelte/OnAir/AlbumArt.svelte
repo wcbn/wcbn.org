@@ -37,8 +37,6 @@
 
   {#await imageSrc then src}
     <img {src} alt="Album Artwork" data-zoomable />
-  {:catch error}
-    <p style="color: red">{error.message}</p>
   {/await}
 
 </div>
