@@ -20,7 +20,7 @@ def schedule(request):
     ctx['title'] = "Schedule"
     return render(request, 'schedule.html', context=ctx)
 
-
+@cache_page(60) # 1 minute
 def playlist(request):
     # TODO verify all timezones work
     now = timezone.now().isoformat()

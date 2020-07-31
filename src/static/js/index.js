@@ -42,10 +42,6 @@ document.addEventListener('turbolinks:load', (event) => {
   }
 })
 
-// jquery
-import jQuery from 'jquery'
-window.$ = window.jQuery = jQuery
-
 // global since recaptcha injects itself before anything else *rolls eyes*
 window.enableFormSubmit = () => {
   document

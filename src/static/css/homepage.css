@@ -5,6 +5,10 @@
     @apply flex items-center justify-around;
     a {
       @apply flex-1;
+
+      &:first-child {
+        @apply pl-2;
+      }
     }
   }
 }
