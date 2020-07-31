@@ -29,14 +29,14 @@
   }
 
   setTimeout(() => {
-    mediumZoom('[data-zoomable]')
+    mediumZoom('#on-air-album-artwork')
   }, 1000)
 </script>
 
 <div class="album-art {isPlaying ? 'open' : 'closed'}">
 
   {#await imageSrc then src}
-    <img {src} alt="Album Artwork" data-zoomable />
+    <img id="on-air-album-artwork" {src} alt="Album Artwork" />
   {/await}
 
 </div>

@@ -38,7 +38,7 @@
   }
 
   button {
-    @apply h-full w-10 text-2xl border-r border-black;
+    @apply w-10 text-2xl border-r border-black;
     min-width: 2.5rem;
 
     &:hover {
