@@ -3,16 +3,20 @@
 {% load static %}
 
 {% block content%}
-<h1 class="heading">{{ flatpage.title }}</h1>
-<hr class="mb-2">
+<div class="flatpage-panel">
 
-<div id="about-content-wrapper">
-  <div>
-    <p>{{ flatpage.content }}</p>
+  <h1 class="heading">{{ flatpage.title }}</h1>
+  <hr class="mb-2">
+
+  <div id="about-content-wrapper">
+    <div>
+      <p>{{ flatpage.content }}</p>
+    </div>
+    <figure>
+      <img alt="WCBN Coverage Map" src="{% static 'img/coverage_map.png' %}" data-zoomable />
+      <figcaption>WCBN Coverage Map</figcaption>
+    </figure>
   </div>
-  <figure>
-    <img alt="WCBN Coverage Map" src="{% static 'img/coverage_map.png' %}" data-zoomable />
-    <figcaption>WCBN Coverage Map</figcaption>
-  </figure>
+
 </div>
 {% endblock %}

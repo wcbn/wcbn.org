@@ -3,10 +3,6 @@
 
   main {
     @apply w-full;
-
-    @screen lg {
-      @apply pr-8;
-    }
   }
 
   aside {
@@ -15,7 +11,7 @@
 
   @screen lg {
     aside {
-      @apply max-w-xs w-full -mt-2 flex flex-col border-l border-black;
+      @apply max-w-xs w-full flex flex-col border-l border-black;
       min-width: 20rem;
 
       section {

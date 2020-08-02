@@ -2,7 +2,7 @@
   @apply hidden;
 
   @screen md {
-    @apply flex w-full;
+    @apply flex w-full pt-2;
   }
 
   table {
@@ -57,7 +57,7 @@
   }
 
   button {
-    @apply font-semibold p-4 py-3 flex justify-between items-center w-full border-t border-black;
+    @apply font-semibold px-4 py-3 flex justify-between items-center w-full;
     &:hover {
       @apply bg-blue-100;
     }
@@ -67,7 +67,7 @@
     max-height: 0;
     transition: max-height 0.2s ease-out;
 
-    @apply text-sm py-0 px-4 overflow-hidden;
+    @apply text-sm py-0 px-4 overflow-hidden border-b border-black;
 
     td {
       @apply pr-4 align-top;

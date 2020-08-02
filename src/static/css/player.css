@@ -16,9 +16,7 @@
 
     .album-art {
       @apply h-full overflow-hidden;
-      max-height: 2.5rem;
       min-width: 2.5rem;
-      max-width: 2.5rem;
     }
 
     .album-art.closed {
@@ -30,6 +28,12 @@
       margin-left: 0;
       transition: all 1s ease-out;
     }
+
+    .album-art img {
+      /* height: 100%; */
+      /* max-width: 2.5rem; */
+      max-width: 38px;
+    }
   }
 
   /* visually center play btn */
@@ -38,7 +42,7 @@
   }
 
   button {
-    @apply w-10 text-2xl border-r border-black;
+    @apply w-10 text-2xl border-r border-black flex flex-col justify-center items-center;
     min-width: 2.5rem;
 
     &:hover {

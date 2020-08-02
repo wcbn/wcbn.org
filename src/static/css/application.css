@@ -47,6 +47,10 @@ body {
   }
 }
 
+.flatpage-panel {
+  @apply pt-2;
+}
+
 /* purgecss end ignore */
 
 @tailwind utilities;

@@ -1,6 +1,6 @@
 #playlist-wrapper {
   table {
-    @apply table-auto w-full border-separate -mt-1;
+    @apply table-auto w-full border-separate;
     border-spacing: 0;
 
     thead {

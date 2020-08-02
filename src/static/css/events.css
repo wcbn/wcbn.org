@@ -1,4 +1,6 @@
 #event-list {
+  @apply pt-2;
+
   h2 {
     @apply font-semibold text-lg mt-2 text-blue-500;
   }
@@ -42,5 +44,9 @@
         max-width: 18rem;
       }
     }
+  }
+
+  @screen lg {
+    @apply pr-8;
   }
 }
