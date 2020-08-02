@@ -16,7 +16,7 @@ footer {
 
     #social-media {
       svg {
-        @apply h-4 w-4 inline-block ml-3 cursor-pointer;
+        @apply h-4 w-4 inline-block ml-2 cursor-pointer;
         &:hover {
           @apply fill-current text-blue-500;
         }

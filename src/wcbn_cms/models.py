@@ -23,6 +23,7 @@ class Event(TimeStampedModel):
     title = CharField()
     summary = models.TextField()
     featured_image = models.ImageField(upload_to='event_images', null=True, blank=True)
+    featured_image_caption = CharField(null=True, blank=True)
 
     start_date = models.DateField()
     start_time = models.TimeField(null=True, blank=True)
@@ -48,6 +49,7 @@ class Concert(TimeStampedModel):
     title = CharField()
     summary = models.TextField()
     featured_image = models.ImageField(upload_to='concert_images', null=True, blank=True)
+    featured_image_caption = CharField(null=True, blank=True)
 
     start_date = models.DateField()
     start_time = models.TimeField(null=True, blank=True)

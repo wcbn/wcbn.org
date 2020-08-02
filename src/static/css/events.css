@@ -26,6 +26,10 @@
         @apply underline;
       }
     }
+
+    h3 > a {
+      @apply text-black;
+    }
   }
 
   .event-body {

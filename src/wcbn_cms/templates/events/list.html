@@ -7,7 +7,7 @@
   <hr>
   {% endifchanged %}
   <div class="event-listing">
-    <h3>{{o.title}}</h3>
+    <h3><a href="{% url request.resolver_match.view_name pk=o.pk %}">{{o.title}}</a></h3>
     {% with o|format_event_time as formatted_time %}
       {% if formatted_time and o.location_name %}
         <p>{{formatted_time}} at {{o.location_name}}</p>
