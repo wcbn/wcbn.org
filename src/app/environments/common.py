@@ -205,11 +205,11 @@ SOCIAL_ICONS = {
 
 
 RESOURCE_LINKS = {
-    "WCBN Sports": "https://www.wcbnsports.org/",
+    "WCBN Sports": "http://www.wcbnsports.org/",
     "Weekly Archive": "http://beanball.wcbn.org/listen/index.html",
     "Maize Pages": "https://maizepages.umich.edu/organization/wcbn",
     "Official Forum": SOCIAL_ICONS["logo-reddit"],
-    "Unofficial Fan Club": "https://www.facebook.com/groups/5530431845/",
+    "Community Fan Club": "https://www.facebook.com/groups/5530431845/",
     'Readback Database': READBACK_URL,
     'Give to WCBN': "https://leadersandbest.umich.edu/find/#!/give/basket/fund/361991"
 }
