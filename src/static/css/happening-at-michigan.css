@@ -2,6 +2,10 @@
   max-height: 100vh;
   @apply overflow-scroll;
 
+  h1 {
+    @apply text-2xl font-bold;
+  }
+
   tr:hover {
     @apply bg-blue-100;
   }

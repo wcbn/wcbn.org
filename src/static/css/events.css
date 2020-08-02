@@ -1,4 +1,6 @@
 #event-list {
+  @apply pt-2;
+
   h2 {
     @apply font-semibold text-lg mt-2 text-blue-500;
   }
@@ -24,6 +26,10 @@
         @apply underline;
       }
     }
+
+    h3 > a {
+      @apply text-black;
+    }
   }
 
   .event-body {
@@ -42,5 +48,9 @@
         max-width: 18rem;
       }
     }
+  }
+
+  @screen lg {
+    @apply pr-8;
   }
 }

@@ -1,10 +1,15 @@
 <div id="article-list">
   {% for o in object_list %}
   <article>
-    <h1>{{o}}</h1>
+    <h1><a href="{% url 'wcbn_cms:articles' pk=o.pk %}">{{o}}</a></h1>
     <h2><span>By {{o.author}}</span><time>{{o.published_at|date}}</time></h2>
     <div>
-      <img src="{{o.featured_image.url}}"></img>
+      {% if o.featured_image %}
+      <figure class="featured-image">
+        <img alt="{{o.featured_image_caption}}" src="{{o.featured_image.url}}"></img>
+        <figcaption>{{o.featured_image_caption}}</figcaption>
+      </figure>
+      {% endif %}
       <div class="article-body">{{o.text|safe}}</div>
     </div>
   </article>

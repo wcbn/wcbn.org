@@ -1,25 +1,75 @@
 #article-list {
+  @apply pt-2 pr-8;
+
   article {
     h1 {
       @apply text-2xl font-bold;
+
+      a:hover {
+        @apply underline;
+      }
     }
     h2 {
       @apply flex justify-between text-sm font-semibold italic text-right;
+
+      span {
+        @apply text-left;
+      }
+
+      time {
+        @apply whitespace-no-wrap ml-6;
+      }
+    }
+
+    .featured-image {
+      img {
+        @apply pt-1 m-auto object-cover w-full;
+        max-height: 25rem;
+      }
+    }
+
+    figcaption {
+      @apply text-sm text-right text-gray-600 italic;
     }
 
     .article-body {
       a {
-        @apply text-blue-500;
+        @apply text-blue-500 leading-tight;
 
         &:hover {
           @apply underline;
         }
       }
-    }
 
-    img {
-      @apply py-1 m-auto object-cover w-full;
-      max-height: 25rem;
+      strong {
+        @apply font-semibold;
+      }
+
+      .attachment-gallery {
+        @apply m-auto flex flex-wrap flex-col items-center justify-center;
+        @screen md {
+          @apply flex-row;
+        }
+
+        img {
+          @apply py-1;
+        }
+
+        figure {
+          @apply flex-1 p-4 w-full;
+          min-width: 20rem;
+
+          &:hover {
+            @apply bg-blue-100;
+          }
+
+          img {
+            @apply object-contain m-auto;
+            max-height: 15rem;
+            min-height: 15rem;
+          }
+        }
+      }
     }
   }
 

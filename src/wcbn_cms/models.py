@@ -7,8 +7,9 @@ from wcbn_util.fields import CharField
 class Article(TimeStampedModel):
     title = CharField()
     text = models.TextField()
-    author = CharField()
-    featured_image = models.ImageField(upload_to='article_images', null=True, blank=True)
+    author = CharField(default='WCBN Staff', blank=True)
+    featured_image = models.ImageField(upload_to='article_images')
+    featured_image_caption = CharField()
     published_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
@@ -22,6 +23,7 @@ class Event(TimeStampedModel):
     title = CharField()
     summary = models.TextField()
     featured_image = models.ImageField(upload_to='event_images', null=True, blank=True)
+    featured_image_caption = CharField(null=True, blank=True)
 
     start_date = models.DateField()
     start_time = models.TimeField(null=True, blank=True)
@@ -47,6 +49,7 @@ class Concert(TimeStampedModel):
     title = CharField()
     summary = models.TextField()
     featured_image = models.ImageField(upload_to='concert_images', null=True, blank=True)
+    featured_image_caption = CharField(null=True, blank=True)
 
     start_date = models.DateField()
     start_time = models.TimeField(null=True, blank=True)
