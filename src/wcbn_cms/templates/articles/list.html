@@ -4,7 +4,9 @@
     <h1>{{o}}</h1>
     <h2><span>By {{o.author}}</span><time>{{o.published_at|date}}</time></h2>
     <div>
-      <img src="{{o.featured_image.url}}"></img>
+      {% if o.featured_image %}
+      <img src="{{o.featured_image.url}}" data-zoomable></img>
+      {% endif %}
       <div class="article-body">{{o.text|safe}}</div>
     </div>
   </article>

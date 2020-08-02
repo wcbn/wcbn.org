@@ -62,6 +62,9 @@ body {
   }
 }
 
+.medium-zoom-image.medium-zoom-image--opened {
+  @apply object-contain !important;
+}
 /* purgecss end ignore */
 
 @tailwind utilities;
