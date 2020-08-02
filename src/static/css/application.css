@@ -51,6 +51,17 @@ body {
   @apply pt-2;
 }
 
+.maize-and-blue-hover {
+  &:hover {
+    color: #ffcb05;
+    background: #00274c;
+
+    svg * {
+      stroke: #ffcb05 !important;
+    }
+  }
+}
+
 /* purgecss end ignore */
 
 @tailwind utilities;

@@ -207,6 +207,7 @@ SOCIAL_ICONS = {
 RESOURCE_LINKS = {
     # 'Become a DJ': "#",
     # 'Become an Underwriter': "#",
+    "WCBN Sports": "https://www.wcbnsports.org/",
     "Maize Pages": "https://maizepages.umich.edu/organization/wcbn",
     "Official Forum": SOCIAL_ICONS["logo-reddit"],
     "Unofficial Fan Club": "https://www.facebook.com/groups/5530431845/",

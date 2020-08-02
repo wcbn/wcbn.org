@@ -19,7 +19,7 @@
     {% endwith %}
     <div class="event-body">
       {% if o.featured_image %}
-      <img src="{{o.featured_image.url}}" />
+      <img src="{{o.featured_image.url}}" data-zoomable />
       {% endif %}
       <div>{{o.summary|safe}}</div>
     </div>
