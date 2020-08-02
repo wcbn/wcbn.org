@@ -8,7 +8,8 @@ class Article(TimeStampedModel):
     title = CharField()
     text = models.TextField()
     author = CharField()
-    featured_image = models.ImageField(upload_to='article_images', null=True, blank=True)
+    featured_image = models.ImageField(upload_to='article_images')
+    featured_image_caption = CharField()
     published_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
