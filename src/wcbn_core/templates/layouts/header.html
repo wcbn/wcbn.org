@@ -17,7 +17,7 @@
     <div id="nav-options">
       
       <ul class="nav-links-wrapper">
-      {% for txt, href in NAV_TABS.items %}<li class="{% if view_name == href %}active{% endif %}">
+      {% for txt, href in NAV_TABS.items %}<li {% if view_name == href %}class="active"{% endif %}>
         <a href="{% url href %}">
           {{txt}}
         </a>
@@ -27,10 +27,10 @@
       <div class="flex-grow"></div>
 
       <ul class="nav-links-wrapper">
-        {% if user.is_authenticated %}
-        <li>
-          <a href="{% url 'logout' %}">Logout</a>
-        </li>
+        {% if user.is_staff %}
+        <li><a href="{% url 'admin:index' %}">Admin</a>
+        </li>{% endif %}{% if user.is_authenticated %}<li>
+        <a href="{% url 'logout' %}">Logout</a></li>
         {% else %}
         {% for txt, href in USER_NAV_TABS.items %}<li class="{% if view_name == href %}active{% endif %}">
           <a href="{% url href %}">{{txt}}</a>
