@@ -1,56 +1,66 @@
 {% load ionicon %}
 {% load static %}
 
-<section id="now-playing">
-  <h1>Now Playing</h1>
-  <div>
-    <p class="font-semibold">{{on_air.name}}</p>
-    <p class="text-blue-500 italic text-sm">{{on_air.dj}}</p>
-  </div>
-</section>
-
-<section id="make-request">
-  <h1>Make a request</h1>
-  <div class="halves p-2">
-    <div class="half text-center text-sm border-r border-black">
-      <p class="flex justify-center mb-1">{% ionicon name="call-outline" %}</p>
-      <p>(734) <span>76</span>3<span>-</span><span>35</span><span>00</span></p>
+<div id="homepage-sidebar">
+  <section id="now-playing">
+    <h1>Now Playing</h1>
+    <div>
+      <p>{{on_air.name}}</p>
+      <p>with {{on_air.dj}}</p>
     </div>
-    <div class="half text-center text-sm">
-      <p class="flex justify-center mb-1">{% ionicon name="chatbox-outline" %}</p>
-      <p>radio<span>@</span>wcbn<span>.</span>org</p>
+  </section>
+
+  <hr>
+
+  <section id="make-request">
+    <h1>Make a request</h1>
+
+    <div>
+      <div>
+        <p>{% ionicon name="call-outline" %}</p>
+        <p>(734) <span>76</span>3<span>-</span><span>35</span><span>00</span></p>
+      </div>
+      <div>
+        <p>{% ionicon name="chatbox-outline" %}</p>
+        <p>radio<span>@</span>wcbn<span>.</span>org</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <hr>
 
-<section id="quick-links">
-  <h1>Quick Links</h1>
-  <div>
-    <ul class="ml-2">
-    {% for text, url in RESOURCE_LINKS.items %}
-      <li>- <a class="generic-link" href="{{url}}" target="_blank" rel="noopener noreferrer">{{text}}</a></li>
-    {% endfor %}
-    </ul>
-    
-  </div>
-</section>
+  <section id="quick-links">
+    <h1>Quick Links</h1>
+    <div>
+      <ul>
+      {% for text, url in RESOURCE_LINKS.items %}
+        <li><a href="{{url}}" target="_blank" rel="noopener noreferrer">{{text}} {% ionicon name="open-outline" %}</a></li>
+      {% endfor %}
+      </ul>
+    </div>
+  </section>
 
-<section id="wcbn-twitter-widget">
-  <div style="height: 500px">
-    <a class="twitter-timeline" data-height="500" data-chrome="transparent" data-dnt="true" href="https://twitter.com/WCBN_FM" target="_blank" rel="noopener noreferrer"></a>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </div> 
-</section>
+  <hr>
 
-<section id="app-store-badges">
-  <h1>Download our mobile app</h1>
-  <div>
-    <a target="_blank" rel="noopener noreferrer" href="{{IOS_URL}}">
-      <img alt="Download from the App Store" src="{% static 'img/badges/app-store-badge.svg' %}"/>
-    </a>
-    <a target="_blank" rel="noopener noreferrer" href="{{ANDROID_URL}}">
-      <img alt="Download from Google Play" src="{% static 'img/badges/google-play-badge.png' %}"/>
-    </a>
-  </div>
-</section>
+  <section id="wcbn-twitter-widget">
+    <div>
+      <a class="twitter-timeline" data-height="500" data-chrome="transparent" data-dnt="true" href="https://twitter.com/WCBN_FM" target="_blank" rel="noopener noreferrer"></a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div> 
+  </section>
+
+  <hr>
+
+  <section id="app-store-badges">
+    <h1>Download our mobile app</h1>
+    <div>
+      <a target="_blank" rel="noopener noreferrer" href="{{IOS_URL}}">
+        <img alt="Download on the App Store" src="{% static 'img/badges/app-store-badge.svg' %}"/>
+      </a>
+      <a target="_blank" rel="noopener noreferrer" href="{{ANDROID_URL}}">
+        <img alt="Get it on Google Play" src="{% static 'img/badges/google-play-badge.png' %}"/>
+      </a>
+    </div>
+  </section>
+
+</div>

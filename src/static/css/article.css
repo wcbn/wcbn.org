@@ -1,4 +1,6 @@
 #article-list {
+  @apply pt-2 pr-8;
+
   article {
     h1 {
       @apply text-2xl font-bold;
