@@ -196,8 +196,8 @@ STUDIO_LINE = "(734) 763-3500"
 SOCIAL_ICONS = {
     "logo-twitter": "https://twitter.com/wcbn_fm",
     "logo-instagram": "https://instagram.com/wcbn_fm",
-    # "logo-facebook": "#", #NOTE facebook sucks
-    # "logo-youtube": "#", #NOTE youtube sucks
+    # "logo-facebook": "#", #NOTE facebook is evil
+    "logo-youtube": "https://www.youtube.com/channel/UCGvolMa6x_1Xc6qet5uMGRQ",
     "logo-soundcloud": "https://soundcloud.com/wcbn",
     "logo-reddit": "https://www.reddit.com/r/wcbn/",
     "logo-github": "https://github.com/wcbn"
@@ -205,9 +205,8 @@ SOCIAL_ICONS = {
 
 
 RESOURCE_LINKS = {
-    # 'Become a DJ': "#",
-    # 'Become an Underwriter': "#",
     "WCBN Sports": "https://www.wcbnsports.org/",
+    "Weekly Archive": "http://beanball.wcbn.org/listen/index.html",
     "Maize Pages": "https://maizepages.umich.edu/organization/wcbn",
     "Official Forum": SOCIAL_ICONS["logo-reddit"],
     "Unofficial Fan Club": "https://www.facebook.com/groups/5530431845/",
