@@ -34,7 +34,7 @@
 </script>
 
 {#await imageSrc then src}
-  <div class="album-art {isPlaying && src ? 'open' : 'closed'}">
+  <figure class="{isPlaying && src ? 'open' : 'closed'}">
     <img id="on-air-album-artwork" {src} alt="Album Artwork" />
-  </div>
+  </figure>
 {/await}

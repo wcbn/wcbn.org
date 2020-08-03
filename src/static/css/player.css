@@ -1,49 +1,50 @@
 #floyd {
   @apply m-auto px-4;
-  min-height: 2.5rem;
-  max-height: 2.5rem;
+  min-height: 4rem;
+  max-height: calc(4em + 2px);
 
   > div {
-    @apply flex h-full  border-t border-b border-black items-center;
+    @apply flex h-full border-t border-b border-black items-center;
   }
 
   > div > div {
     @apply flex h-full w-full;
+    max-height: calc(4em - 2px);
   }
 
   > div > div > div {
     @apply flex h-full w-full items-center whitespace-no-wrap overflow-x-scroll;
+    height: calc(4em - 2px);
 
-    .album-art {
+    figure {
       @apply h-full overflow-hidden;
-      min-width: 2.5rem;
+      height: 4rem;
+      min-width: 4rem;
     }
 
-    .album-art.closed {
-      margin-left: -2.5rem;
+    figure.closed {
+      margin-left: -4rem;
       transition: all 1s ease-out;
     }
 
-    .album-art.open {
+    figure.open {
       margin-left: 0;
       transition: all 1s ease-out;
     }
 
-    .album-art img {
-      /* height: 100%; */
-      /* max-width: 2.5rem; */
-      max-width: 38px;
+    figure img {
+      max-width: 4rem;
     }
   }
 
   /* visually center play btn */
   button[data-playing='false'] {
-    padding-left: 2px;
+    padding-left: 4px;
   }
 
   button {
-    @apply w-10 text-2xl border-r border-black flex flex-col justify-center items-center;
-    min-width: 2.5rem;
+    @apply text-4xl border-r border-black flex flex-col justify-center items-center;
+    min-width: 4rem;
 
     &:hover {
       @apply text-white bg-black;
@@ -51,6 +52,6 @@
   }
 
   p {
-    @apply mx-2 text-sm font-semibold;
+    @apply mx-3 font-semibold;
   }
 }

@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.core.exceptions import ValidationError
 from wcbn_util.models import TimeStampedModel
 from wcbn_util.fields import CharField
 
@@ -71,3 +72,9 @@ class Concert(TimeStampedModel):
 
     class Meta:
         db_table = "concerts"
+    
+    def clean(self):
+        if self.featured_image and not self.featured_image_caption:
+            raise ValidationError("Featured Image Caption required for Featured Image")
+        if not self.featured_image and self.featured_image_caption:
+            raise ValidationError("Featured Image required for Featured Image Caption")

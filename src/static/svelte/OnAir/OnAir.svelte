@@ -1,4 +1,5 @@
 <script>
+  import { onDestroy } from 'svelte';
   import SongInfo from './SongInfo.svelte'
   import AlbumArt from './AlbumArt.svelte'
   export let isPlaying
@@ -18,7 +19,7 @@
 
   let song = ickyThump
 
-  setInterval(() => {
+  const interval = setInterval(() => {
     // fetch(BASE_URL + '/playlist.json')
     //   .then(
     //     (response) => {
@@ -60,6 +61,10 @@
 
     song = ickyThump // || null
   }, POLL_INTERVAL)
+
+  onDestroy(() => {
+		clearInterval(interval);
+	});
 </script>
 
 <div>
