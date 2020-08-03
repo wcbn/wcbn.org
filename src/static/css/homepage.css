@@ -1,5 +1,5 @@
 #homepage-sidebar {
-  @apply pl-4 pt-2;
+  @apply pl-4 pt-4;
 
   h1 {
     @apply text-2xl font-bold;
