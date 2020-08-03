@@ -1,7 +1,7 @@
 #floyd {
   @apply m-auto px-4;
-  min-height: 4rem;
-  max-height: calc(4em + 2px);
+  min-height: 3.5rem;
+  max-height: calc(3.5rem + 2px);
 
   > div {
     @apply flex h-full border-t border-b border-black items-center;
@@ -9,21 +9,21 @@
 
   > div > div {
     @apply flex h-full w-full;
-    max-height: calc(4em - 2px);
+    max-height: calc(3.5rem - 2px);
   }
 
   > div > div > div {
     @apply flex h-full w-full items-center whitespace-no-wrap overflow-x-scroll;
-    height: calc(4em - 2px);
+    height: calc(3.5rem - 2px);
 
     figure {
       @apply h-full overflow-hidden;
-      height: 4rem;
-      min-width: 4rem;
+      height: 3.5rem;
+      min-width: 3.5rem;
     }
 
     figure.closed {
-      margin-left: -4rem;
+      margin-left: -3.5rem;
       transition: all 1s ease-out;
     }
 
@@ -33,7 +33,7 @@
     }
 
     figure img {
-      max-width: 4rem;
+      max-width: 3.5rem;
     }
   }
 
@@ -44,7 +44,7 @@
 
   button {
     @apply text-4xl border-r border-black flex flex-col justify-center items-center;
-    min-width: 4rem;
+    min-width: 3.5rem;
 
     &:hover {
       @apply text-white bg-black;

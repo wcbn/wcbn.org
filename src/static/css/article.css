@@ -1,5 +1,9 @@
 #article-list {
-  @apply pt-2 pr-8;
+  @apply pt-4;
+  @screen lg {
+    @apply mx-8;
+  }
+  max-width: 42rem; /* fullwidth - sidebarwith - paddingX; 64rem - 20rem - 2rem */
 
   article {
     h1 {
@@ -57,7 +61,7 @@
 
         figure {
           @apply flex-1 p-4 w-full;
-          min-width: 20rem;
+          min-width: 15rem;
 
           &:hover {
             @apply bg-blue-100;

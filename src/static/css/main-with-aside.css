@@ -2,7 +2,7 @@
   @apply flex justify-between h-full;
 
   main {
-    @apply w-full;
+    @apply w-full flex justify-center;
   }
 
   aside {
