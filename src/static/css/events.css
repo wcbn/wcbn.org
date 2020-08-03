@@ -1,5 +1,9 @@
 #event-list {
-  @apply pt-2;
+  @apply pt-4;
+  @screen lg {
+    @apply mx-8;
+  }
+  max-width: 42rem; /* fullwidth - sidebarwith - paddingX; 64rem - 20rem - 2rem */
 
   h2 {
     @apply font-semibold text-lg mt-2 text-blue-500;
@@ -48,9 +52,5 @@
         max-width: 18rem;
       }
     }
-  }
-
-  @screen lg {
-    @apply pr-8;
   }
 }

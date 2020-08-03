@@ -41,6 +41,12 @@
 Array.from(document.querySelectorAll("tbody > tr"))
   .filter((tr) => tr.children.length === 6)
   .forEach((tr) => tr.classList.add("hover:bg-blue-100"));
+
+document.querySelectorAll(".with a").forEach((a) => {
+  a.setAttribute("target", "_blank");
+  a.setAttribute("rel", "noopener noreferrer");
+});
+
 </script>
 
 {% endblock %}
