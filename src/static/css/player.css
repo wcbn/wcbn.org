@@ -43,15 +43,19 @@
   }
 
   button {
-    @apply text-4xl border-r border-black flex flex-col justify-center items-center;
+    @apply text-4xl border-r border-black;
     min-width: 3.5rem;
 
     &:hover {
       @apply text-white bg-black;
     }
+
+    span {
+      @apply h-full flex justify-center items-center;
+    }
   }
 
   p {
-    @apply mx-3 font-semibold;
+    @apply mx-3 font-semibold leading-tight;
   }
 }

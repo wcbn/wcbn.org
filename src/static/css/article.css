@@ -1,7 +1,7 @@
 #article-list {
   @apply pt-4;
   @screen lg {
-    @apply mx-8;
+    @apply mr-8;
   }
   max-width: 42rem; /* fullwidth - sidebarwith - paddingX; 64rem - 20rem - 2rem */
 
