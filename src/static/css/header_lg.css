@@ -27,7 +27,7 @@
     @apply inline-block relative z-0 text-base h-full border-none;
 
     a {
-      @apply px-5 h-full flex items-center;
+      @apply px-4 h-full flex items-center;
     }
 
     &:before {
@@ -49,7 +49,7 @@
 
   nav ul li.active {
     border-left: 1px solid black;
-    @apply bg-blue-100;
+    @apply bg-gray-200;
 
     &:before {
       height: 0;

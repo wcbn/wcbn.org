@@ -3,4 +3,6 @@
   export let isPlaying
 </script>
 
-<button on:click={handlePlayPause} data-playing={isPlaying}>{isPlaying ? '■' : '►'}</button>
+<button on:click={handlePlayPause} data-playing={isPlaying}>
+  <span>{isPlaying ? '■' : '►'}</span>
+</button>
