@@ -224,8 +224,8 @@ NAV_TABS = {
 }
 
 USER_NAV_TABS = {
-    # 'Log in': 'wcbn_auth:login',
-    # 'Sign up': 'wcbn_auth:create_user'
+    'Log in': 'wcbn_auth:login',
+    'Sign up': 'wcbn_auth:create_user'
 }
 
 IOS_URL = 'https://apps.apple.com/us/app/wcbn-fm-ann-arbor/id600658964?mt=8'

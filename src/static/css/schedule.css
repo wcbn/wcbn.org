@@ -9,7 +9,7 @@
     @apply table-fixed border-separate;
 
     th:not(:first-child) {
-      @apply p-1;
+      @apply font-semibold pb-1;
       width: 14.285%; /* 1/7 */
     }
 
@@ -17,11 +17,12 @@
       @apply align-top;
       p {
         @apply text-xs font-semibold -mt-3 whitespace-no-wrap text-right;
+        min-height: 2rem;
       }
     }
 
     td:not(:first-child) {
-      @apply border p-1 align-top;
+      @apply border p-1 align-top leading-snug;
 
       &:hover {
         @apply bg-blue-100;
