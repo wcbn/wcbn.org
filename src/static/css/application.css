@@ -76,9 +76,13 @@ blockquote:before {
   @apply mr-2 mt-4 text-blue-500 leading-4 text-5xl;
 }
 
-
 .medium-zoom-image.medium-zoom-image--opened {
   @apply object-contain !important;
+}
+
+.turbolinks-progress-bar {
+  height: 5px;
+  @apply bg-black;
 }
 /* purgecss end ignore */
 
